@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<style>
+    .heading {
+        font-size: 60px;
+        text-align: center;
+        color: cornflowerblue;
+        font-weight: 700;
+        font-family: "Arial";
+
+    }
+
+    label {
+        font-family: Georgia, Times, 'Times New Roman', serif;
+        font-size: 30px;
+        font-weight: 300;
+        color: #5b5ea6;
+    }
+
+    input {
+        width: 200px;
+        height: 25px;
+        color: #e15d44;
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .input-box {
+        display: block;
+        display: flex;
+        gap: 20px;
+    }
+
+    #btn {
+        font-size: 40px;
+        padding: 10px;
+        text-decoration: none;
+        background-color: lightgreen;
+        border-radius: 10%;
+        padding: 25px;
+        color: black;
+        font-family: "Consolas";
+        font-weight: 700;
+    }
+</style>
+
+<body>
+    <h1 class="heading">Student Registration Form</h1>
+
+    <form action="#" id="form">
+        <div class="input-box">
+            <label for="email">Email id</label>
+            <input type="email" name="email" id="email">
+        </div>
+
+        <div class="input-box">
+            <label for="regno">Registration No.</label>
+            <input type="number" name="regno" id="regno">
+        </div>
+
+        <div class="input-box">
+            <label for="regno">Date of Birth</label>
+            <input type="date" name="dob" id="dob">
+        </div>
+
+        <div class="input-box">
+            <a href="#" id="btn" onclick="handleClick()">Submit</a>
+        </div>
+
+
+    </form>
+</body>
+<script>
+    function handleClick() {
+        let form = document.getElementById('form')
+        let email = document.getElementById('email')
+        let regno = document.getElementById('regno')
+        let date = document.getElementById('dob')
+        let error = false;
+        if (email.innerText.length <= 0) {
+            alert("Invalid email address")
+            error = true;
+        }
+
+        if (parseInt(regno < 0) || regno.innerText.length <= 0) {
+            alert("Invalid Registration Number")
+            error = true;
+        }
+
+        if (!error) {
+            alert("Successfully submitted")
+        }
+
+    }
+</script>
+
+</html>

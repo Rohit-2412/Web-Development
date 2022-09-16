@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Form Validation</title>
+</head>
+<style>
+    h1 {
+        font-size: 5rem;
+        text-align: center;
+        font-family: 'MonoLisa';
+    }
+
+    form {
+        font-size: 2rem;
+        font-family: 'Monoid';
+    }
+
+    input {
+        height: 1.25rem;
+        padding: 10px;
+    }
+
+    label {
+        letter-spacing: 1.5px;
+    }
+
+    #reg {
+        padding-bottom: 30px;
+    }
+
+    span {
+        font-family: 'Arial';
+        color: #cc3737;
+    }
+</style>
+
+<body>
+    <h1>Login</h1>
+    <center>
+
+        <form action="form.php" id="form">
+            <label for="Username">Username<span>*</span></label>
+            <input type="text" name="Username" id="username" placeholder="Username"> <br><br>
+            <label>Password<span>*</span></label>
+            <input type="password" name="password" id="password" placeholder="Password"> <br><br>
+            <input id="reg" type="submit" value="Register">
+        </form>
+    </center>
+</body>
+<script>
+    let form = document.getElementById('form')
+    form.addEventListener('submit', function (err) {
+        err.preventDefault();
+        let username = document.getElementById('username').innerText
+        let password = document.getElementById('password').innerText
+
+        if (username.length <= 0 || password.length <= 0)
+            alert("Enter details")
+    })
+</script>
+
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        list-style: none;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #navbar {
+        background-image: linear-gradient(to right, var(--pink), var(--blue));
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+
+    a {
+        color: white;
+        word-spacing: 2rem;
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    a:hover {
+        font-weight: bold;
+        font-size: 30px;
+        text-decoration: underline;
+        color: white;
+        text-shadow: 5px 0px 5px wheat;
+    }
+
+    .nav-items {
+        margin: 10px 50px;
+        padding: 11px 5px;
+    }
+
+    .nav {
+        display: flex;
+    }
+
+    /* front image */
+    #header {
+        max-width: 100%;
+        background: url(../Images/dance-banner.jpg) no-repeat center center/cover;
+        padding-top: 90px;
+        /* opacity: .8; */
+        height: 90vh;
+    }
+
+    /* main pic heading */
+    .title {
+        font-size: 7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        letter-spacing: 2.5rem;
+        margin-top: 50vh;
+        color: whitesmoke;
+        text-shadow: 5px 5px 5px whitesmoke;
+    }
+
+
+    .blue {
+        text-shadow: 5px 5px 5px var(--blue);
+    }
+
+    .pink {
+        text-shadow: 8px 0px 5px var(--pink);
+    }
+
+    :root {
+        --blue: #20cbe1;
+        --pink: #ee9398;
+    }
+
+    /* cards container height */
+    #card-section {
+        background-color: rgba(255, 140, 0, 0.238);
+        box-shadow: 0 -10px 20px orchid;
+        box-shadow: 0 10px 20px wheat;
+        padding-top: 1px;
+        max-height: 140vh;
+    }
+
+    #card-gallery {
+        max-height: 100vh;
+        max-width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    #card-section img {
+        height: 250px;
+        width: 250px;
+    }
+
+    /* heading : image gallery */
+    #card-section h1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 3.5rem;
+        color: deeppink;
+        word-spacing: 2.5rem;
+        letter-spacing: 2.5rem;
+        margin: 10px 20px;
+        padding: 7px;
+        /* background-color: whitesmoke; */
+    }
+
+    .card:nth-child(odd) {
+        margin: 25px;
+        box-shadow: 5px 5px 30px chartreuse, -5px -5px 10px yellowgreen;
+        border-radius: 55px 10px;
+    }
+
+    .card:nth-child(even) {
+        margin: 25px;
+        box-shadow: 5px 5px 30px chartreuse, -5px -5px 10px yellowgreen;
+        border-radius: 10px 55px;
+    }
+
+    #footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 10px;
+        padding: 10px;
+        background-image: linear-gradient(to left, var(--pink), var(--blue));
+        color: black;
+    }
+
+    #footer h1 {
+        color: white;
+        margin: 10px 0;
+        letter-spacing: 2rem;
+        font-size: 2.5rem;
+        padding-bottom: 7px;
+    }
+
+    #footer h2 {
+        font-size: 2rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        letter-spacing: 1rem;
+        color: blueviolet;
+        padding: 5px 0;
+        padding-bottom: 0;
+        margin-bottom: -12px;
+    }
+
+    #footer p {
+        margin: 5px 0;
+    }
+
+    .icon-lists {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+    }
+
+    .icon-lists img {
+        height: 35px;
+        width: 35px;
+    }
+</style>
+
+<body>
+    <div id="navbar">
+        <ul class="nav">
+            <li class="nav-items"><a href="#">Home</li></a>
+            <li class="nav-items"><a href="#">About</li></a>
+            <li class="nav-items"><a href="#">Register</li></a>
+            <li class="nav-items"><a href="#">Contact Us</li></a>
+        </ul>
+    </div>
+    <div id="header">
+        <div class="title">
+            <p class="blue">Dance</p>
+            <p class="pink">Academy</p>
+        </div>
+    </div>
+    <div id="card-section">
+        <h1>Our Dance Gallery</h1>
+        <div id="card-gallery">
+            <div class="card"><img src="../Images/1.png" alt=""></div>
+            <div class="card"><img src="../Images/2.png" alt=""></div>
+            <div class="card"><img src="../Images/4.png" alt=""></div>
+            <div class="card"><img src="../Images/1.png" alt=""></div>
+            <div class="card"><img src="../Images/3.png" alt=""></div>
+        </div>
+        <div id="card-gallery">
+            <div class="card"><img src="../Images/3.png" alt=""></div>
+            <div class="card"><img src="../Images/1.png" alt=""></div>
+            <div class="card"><img src="../Images/3.png" alt=""></div>
+            <div class="card"><img src="../Images/2.png" alt=""></div>
+            <div class="card"><img src="../Images/1.png" alt=""></div>
+        </div>
+    </div>
+    <footer id="footer">
+        <h1>Best Dance Academy</h1>
+        <p>Copyright &copy; &nbsp; &nbsp;|&nbsp;&nbsp; All rights Reserved 2022 </p>
+        <h2>Follow Us On</h2>
+        <div class="social-buttons">
+            <div class="icon-lists">
+                <div class="icon"><img src="../logo/facebook.png" alt=""></div>
+                <div class="icon"><img src="../logo/google.png" alt=""></div>
+                <div class="icon"><img src="../logo/apple-logo.png" alt=""></div>
+                <div class="icon"><img src="../logo/twitter.png" alt=""></div>
+                <div class="icon"><img src="../logo/youtube.png" alt=""></div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

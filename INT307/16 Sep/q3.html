@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js Keyboard Event</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<style>
+    #heading {
+        font-size: 50px;
+        color: royalblue;
+        text-align: center;
+    }
+
+    #subHeading {
+        font-size: 30px;
+        text-decoration: underline;
+        text-align: center;
+        color: palevioletred;
+    }
+
+    #para {
+        font-family: 'Times New Roman';
+        padding: 0 50px;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <div id="app">
+        <h1 id="heading">{{heading}}</h1>
+        <h3 id="subHeading">{{subHeading}}</h3>
+        <p id="para" onclick="handleClick()" ondrag="handleKeyUp()">{{para}}</p>
+    </div>
+</body>
+<script>
+
+    function handleClick() {
+        let para = document.getElementById('para')
+        para.style.color = 'red'
+    }
+
+    function handleKeyUp() {
+        let para = document.getElementById('para')
+        para.style.color = 'blue'
+    }
+    new Vue({
+        el: "#app",
+        data: {
+            heading: "Keyboard Event",
+            subHeading: "Click for Red color and Drag for violet color",
+            para: `Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Obcaecati
+        perferendis
+        tempore quod rerum. Repudiandae odio ducimus culpa dolorum excepturi esse, non incidunt perspiciatis provident
+        consequatur eaque corporis adipisci maxime impedit minus nulla enim itaque illo voluptates voluptas dolorem.
+        Voluptatem sunt et architecto esse cupiditate sed quibusdam natus ipsum rerum delectus nobis dolores possimus,
+        doloremque suscipit pariatur necessitatibus veniam vel nulla vitae aut in. Accusamus tempore quas maiores labore
+        nulla et molestias recusandae cumque dolorem optio. Doloremque excepturi velit, pariatur consequuntur culpa
+        blanditiis quo ipsum recusandae, nulla, neque nesciunt obcaecati? Minima ab fugit ut pariatur ducimus at cumque
+        perferendis tenetur eos!`
+        }
+    })
+</script>
+
+</html>

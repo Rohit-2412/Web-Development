@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+    background-color: #eee;
+    padding: 5px;
+}
+h1 {
+    margin: 20px 0;
+    font-size: 50px;
+    color: tomato;
+    text-align: center;
+}
+h2 {
+    margin: 20px 0;
+    font-size: 35px;
+    color: seagreen;
+    text-align: center;
+}
+
+#roll {
+    font-size: 34px;
+    margin: 20px 0;
+    text-align: center;
+    color: rebeccapurple;
+}
+
+#content {
+    margin: 10px 0;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+#flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.li_item {
+    font-size: 20px;
+    text-decoration: none;
+    font-style: italic;
+    color: sienna;
+}
+.list {
+    text-align: center;
+}
+.line {
+    height: 10px;
+    background-color: mediumspringgreen;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collage</title>
+</head>
+<style>
+    .container {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas:
+            'one one one one'
+            'two two two two'
+            'two two two two'
+            'three four four four'
+            'five five six six'
+        ;
+    }
+
+    #one {
+        grid-area: one;
+        height: 75px;
+        background-color: mintcream;
+        /* border: 2px solid blanchedalmond; */
+        box-shadow: 0px 15px 10px grey;
+
+    }
+
+    #two {
+        grid-area: two;
+        height: 90vh;
+        width: 100vw;
+        background: url(banner.jpg) no-repeat center center/cover;
+        margin: 0 auto;
+        margin-top: -10px;
+        z-index: -1;
+    }
+
+    #three {
+        grid-area: three;
+        background-color: wheat;
+        border: 2px solid blanchedalmond;
+    }
+
+    #four {
+        grid-area: four;
+        background-color: whitesmoke;
+        border-radius: 100%;
+        height: 200px;
+        width: 200px;
+        box-shadow: 2px 2px 2px black, -2px -2px 2px black;
+        margin-left: 100px;
+    }
+
+    #five {
+        grid-area: five;
+        background-color: yellowgreen;
+        border: 2px solid red;
+        width: 35px;
+        height: 60px;
+        /* margin: 0 auto; */
+    }
+
+    /* #five img {
+        height: 250px;
+        width: 600px;
+    } */
+    #six {
+        grid-area: six;
+        background-color: yellowgreen;
+        border: 2px solid blanchedalmond;
+        width: 35px;
+        height: 60px;
+        margin: 0 auto;
+    }
+
+    #five img {
+        height: 250px;
+        width: 600px;
+    }
+
+
+    #four p {
+        display: inline;
+        margin-top: 15px;
+        margin: auto;
+    }
+
+    #abc {
+        font-size: 5rem;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div id="one" class="square">navbar</div>
+        <div id="two" class="square"></div>
+        <div id="three" class="square">
+            <h1>Meet Dr. Carson</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore quisquam quam, doloribus mollitia vitae
+                doloremque voluptatum non nemo ratione eos voluptates voluptas eum adipisci ullam eaque, fuga nisi
+                eligendi quos minima! Molestiae consectetur animi fuga soluta accusantium cumque illum alias quas minus
+                deserunt voluptates ipsam, quod impedit assumenda autem aliquam.</p>
+        </div>
+
+        <div id="four">
+            <p>
+            <p id="abc">12</p> years of experience</p>
+        </div>
+        <div id="five">
+            <div>
+                <img src="banner1.jpg" alt="">
+            </div>
+        </div>
+        <div id="six">
+            <div class="small-box"><img src="banner1.jpg" alt=""></div>
+            <!-- <div class="small-box"><img src="../Project/Food Website/img1.png" alt=""></div>
+            <div class="small-box"><img src="../Project/Food Website/img1.png" alt=""></div>
+            <div class="small-box"><img src="../Project/Food Website/img1.png" alt=""></div> -->
+        </div>
+    </div>
+</body>
+
+</html>

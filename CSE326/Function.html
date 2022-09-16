@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+
+    <script>
+
+        // function sum(a, b, c) {
+        //     var a = prompt("Enter a : ");
+        //     var b = prompt("Enter b : ");
+        //     var c = prompt("Enter c : ");
+        //     var sum = a + b + c;
+        //     document.write(sum);
+        // }
+
+        // sum(a, b, c);
+
+        // function detail(value) {
+        //     alert(value);
+        // }
+
+        function show() {
+            alert("Name : " + document.getElementById("name").value );
+            alert("Roll Number : " + document.getElementById("roll").value);
+            alert("Address : " + document.getElementById("class").value);
+            alert("Email address : " + document.getElementById("email").value);
+
+            // document.write("Name : " + document.getElementById("name").value);
+            // document.write("Roll number : " + document.getElementById("roll").value);
+            // document.write("Class : " + document.getElementById("class").value);
+            // document.write("Email address : " + document.getElementById("email").value);
+            // document.write("abcd");
+        }
+
+
+        function reset() {
+            
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 
+    // name
+    // roll
+    // class
+    // email address
+    // button -->
+
+    <form action="">
+        <label for="name">Enter your name<br> <br></label>
+        <input type="text" value="" id="name">
+        <br>
+        <br>
+
+        <label for="roll">Enter your Roll Number<br> <br></label>
+        <input type="number" value="" id="roll">
+        <br>
+        <br>
+
+        <label for="class">Enter your Class<br> <br></label>
+        <input type="number" value="" id="class">
+        <br>
+        <br>
+
+        <label for="email">Enter your Email address<br> <br></label>
+        <input type="email" value="" id="email">
+        <br>
+        <br>
+
+        <input type="button" value="Submit" onclick="show()">
+
+        <input type="reset" value="Reset" onreset="reset()">
+
+    </form>
+</body>
+
+</html>

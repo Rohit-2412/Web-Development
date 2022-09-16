@@ -1,0 +1,28 @@
+<!-- create a program and invoke any javascript event into that program  -->
+
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<body>
+
+    <div id="app1">
+        <h1 id='heading' onmouseover="onMouseOver()" onclick="clickHandle()">{{message}}</h1>
+    </div>
+    <script>
+        var first = new Vue({
+            el: '#app1',
+            data: { message: 'Working on Javscript events with Vue instances' }
+        })
+        function onMouseOver() {
+            document.getElementById('heading').style.color = '#fe4'
+        }
+
+        function clickHandle() {
+            document.getElementById('heading').style.fontSize = '3rem';
+        }
+    </script>
+
+</body>
+
+</html>

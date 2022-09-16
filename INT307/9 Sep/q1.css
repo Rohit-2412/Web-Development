@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 50px;
+}
+#box {
+    width: 500px;
+    height: 500px;
+    background-color: #eee;
+    border-radius: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* --emerald: #009b77;
+--tomato: #dd4124;
+--pink: #d65076;
+--sand: #efc050;
+--blue: #5b5ea6;
+--lily: #e15d44;
+--rose: #c3447a;
+--lightblue: #98b4d4;
+--coral: #ff6f61;
+--classic-blue: #34568b; */
+.main-heading {
+    font-size: 72px;
+    text-align: center;
+    color: #efc050;
+}
+.heading {
+    font-size: 3rem;
+    color: #34568b;
+    margin: 20px;
+}

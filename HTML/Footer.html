@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background-color: blueviolet;
+        text-transform: capitalize;
+    }
+
+    h1 {
+        text-align: center;
+        color: whitesmoke;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    li {
+        list-style: none;
+        margin: 10px;
+    }
+
+    table {
+        border-collapse: separate;
+        border-spacing: 15px 5px;
+    }
+
+    td {
+        width: 125px;
+    }
+
+    input {
+        margin-left: 630px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding: 2.5px;
+        border-bottom: 5px solid black;
+        padding-left: 20px;
+    }
+
+    .btn {
+        margin: 5px 10px;
+        padding: 10px;
+        padding-left: 70px;
+        padding-right: 70px;
+        border-radius: 25px;
+    }
+
+    .col1,
+    .col2,
+    .col3,
+    .col4 {
+        border: 3px solid goldenrod;
+        height: 30vh;
+        width: 18vw;
+        color: white;
+    }
+
+    h2 {
+        margin: 10px;
+        font-size: 2rem;
+    }
+
+    .logo {
+        display: flex;
+    }
+
+    .logo p {
+        display: inline;
+        margin-top: 35px;
+        margin-left: 25px;
+        padding-top: 5px;
+    }
+
+    .img {
+        margin: 5px;
+        width: 85px;
+        height: 85px;
+    }
+
+    .abt {
+        margin: 10px;
+        text-align: justify;
+
+    }
+</style>
+
+<body>
+    <h1 class="heading">Join our mailing list to receive the news &</h1>
+    <h1>latest trends</h1>
+    <input type="email" placeholder="Email address..."><button class="btn">Subscribe now</button>
+    <div class="container">
+        <div class="col1">
+            <h2>Contact us</h2>
+            <ul>
+                <li>rio de janerio</li>
+                <li>010 020 040</li>
+                <li>info@email.com</li>
+            </ul>
+        </div>
+        <div class="col2">
+            <h2>About us</h2>
+            <table>
+                <tr>
+                    <td>home</td>
+                    <td>about</td>
+                </tr>
+                <tr>
+                    <td>services</td>
+                    <td>testimonials</td>
+                </tr>
+                <tr>
+                    <td>about</td>
+                    <td>pricing</td>
+                </tr>
+                <tr>
+                    <td>testimonials</td>
+                </tr>
+                <tr>
+                    <td>pricing</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col3">
+            <h2>Useful links</h2>
+            <table>
+                <tr>
+                    <td>free apps</td>
+                    <td>app dev team</td>
+                </tr>
+                <tr>
+                    <td>app engine</td>
+                    <td>digital web</td>
+                </tr>
+                <tr>
+                    <td>programming</td>
+                    <td>normal apps</td>
+                </tr>
+                <tr>
+                    <td>development</td>
+                </tr>
+                <tr>
+                    <td>app news</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col4">
+            <div class="logo"><img class="img" src="../Project/Food Website/logo3.png" alt="">
+                <p>about our company</p>
+            </div>
+            <p class="abt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex labore numquam odio facere
+                tempora enim
+                ratione iste doloribus, obcaecati molestiae!</p>
+        </div>
+    </div>
+</body>
+
+</html>

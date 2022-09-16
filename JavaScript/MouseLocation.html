@@ -1,0 +1,24 @@
+<html>
+<header>
+    <!-- By the way, this is not the actual html file, just a generic example. -->
+    <script src='game.js'></script>
+</header>
+
+<body>
+    <div id="example">
+        <p id="test">x: , y:</p>
+    </div>
+</body>
+<script>
+    function printMousePos() {
+        var cursorX;
+        var cursorY;
+        document.onmousemove = function (e) {
+            cursorX = e.pageX;
+            cursorY = e.pageY;
+        }
+        document.getElementById('test').innerHTML = "x: " + cursorX + ", y: " + cursorY;
+    }
+</script>
+
+</html>

@@ -1,0 +1,183 @@
+:root {
+  /* fonts section */
+  --heading1: "Rock Salt", cursive;
+  --cursive2: "Cedarville Cursive", cursive;
+  --handwriting1: "Playfair Display", serif;
+  --basic1: "Open Sans", sans-serif;
+  --basic2: "Mukta", sans-serif;
+  --italic1: "Kalam", cursive;
+  --cursive1: "Comforter", cursive;
+
+  /* colors section */
+  --emerald: #009b77;
+  --tomato: #dd4124;
+  --pink: #d65076;
+  --sand: #efc050;
+  --blue: #5b5ea6;
+  --lily: #e15d44;
+  --rose: #c3447a;
+  --lightblue: #98b4d4;
+  --coral: #ff6f61;
+  --classic-blue: #34568b;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: var(--basic1);
+  background-color: whitesmoke;
+}
+
+#top {
+  height: 100px;
+  margin-bottom: -10px;
+}
+
+#top img {
+  height: 105px;
+  width: 100%;
+  margin-top: -10px;
+}
+
+#main {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#heading {
+  text-align: center;
+  margin: 10px;
+}
+
+#heading h1 {
+  font-size: 2.5rem;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  border: 2px solid gainsboro;
+  max-height: 70vh;
+  width: 30vw;
+  padding: 5px;
+  border-radius: 2.5px;
+}
+
+input {
+  margin: 10px 5px;
+  padding: 7px 5px;
+  height: 22.5px;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: 1px solid gainsboro !important;
+}
+
+#name-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+#name-section input {
+  width: 45%;
+}
+
+#email {
+  width: 94%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#pass {
+  width: 94%;
+}
+
+#dob-section h5 {
+  font-size: 1.1rem;
+  padding-left: 5px;
+  margin: 4px 0;
+}
+
+#dob-section select {
+  border-radius: 5px;
+  background-color: white;
+}
+
+.dob {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.d {
+  width: 31.75%;
+  height: 30px;
+}
+
+#gen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#gender_section h5 {
+  font-size: 1.1rem;
+  padding-left: 5px;
+  margin: 5px 0;
+}
+
+.gender {
+  border: 1px solid black;
+  border-radius: 3px;
+  margin: 0 5px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  width: 33.3%;
+  background-color: white;
+}
+
+.gender label {
+  color: black;
+  padding-left: 7.5px;
+}
+
+#gender_choice {
+  margin-left: auto;
+}
+
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  height: 50px;
+  font-size: 0.85rem;
+  padding-left: 7px;
+  margin: 15px 0;
+  margin-bottom: -5px;
+}
+
+#btn {
+  background-color: rgb(92, 252, 0);
+  border-radius: 5px;
+  height: 40px;
+  width: 200px;
+  font-size: 1.55rem;
+  color: ghostwhite;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 15px;
+}

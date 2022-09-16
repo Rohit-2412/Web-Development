@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Times New Roman";
+}
+
+body {
+    background-image: url("../../images/background.jpg");
+    background-size: cover;
+}
+.heading {
+    margin-top: 20px;
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    color: #098;
+}
+
+p {
+    font-size: 1.85rem;
+    font-weight: 500;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #0008;
+}
+
+input {
+    margin: 15px;
+    padding: 10px;
+    width: 250px;
+}
+
+.btn {
+    background-color: #00fe44;
+    border-radius: 20px;
+    padding: 15px;
+}

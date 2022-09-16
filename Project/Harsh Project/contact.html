@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    * {
+        font-family: 'Spartan', sans-serif;
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        -webkit-transition: .2s linear;
+        transition: .2s linear;
+    }
+
+    html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+
+
+    section {
+        padding: 3rem 7.5%;
+    }
+
+    .heading {
+        background: url(assets/heading.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        padding-top: 5rem;
+        padding-bottom: 6rem;
+        opacity: .85;
+    }
+
+    .heading h1 {
+        color: #000000;
+        font-size: 4rem;
+    }
+
+    .heading p {
+        padding: 1rem 0 .25rem 0;
+        font-size: 1.95rem;
+    }
+
+    .heading p a {
+        color: #4caf50;
+        padding-right: .5rem;
+        font-weight: bold;
+        position: relative;
+    }
+
+    .heading p a:hover {
+        color: #1b4332;
+    }
+
+    .heading .primary {
+        font-size: 2.25rem;
+        text-transform: none;
+        color: #dd4124;
+    }
+
+    .heading .secondary {
+        color: #34568b;
+        text-transform: none;
+    }
+
+    .contact .icons-container {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: (minmax(30rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .contact .icons-container .icons {
+        text-align: center;
+        border-radius: 5px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        padding: 2rem;
+    }
+
+    .contact .icons-container .icons:hover {
+        -webkit-box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.5) 0px 0.25em 1em;
+        box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.5) 0px 0.25em 1em;
+    }
+
+    .contact .icons-container .icons i {
+        height: 6rem;
+        width: 6rem;
+        line-height: 6rem;
+        font-size: 2.5rem;
+        color: #fdfffc;
+        border-radius: 50%;
+    }
+
+    .contact .icons-container .icons .fa-phone {
+        background: #7496cb;
+    }
+
+    .contact .icons-container .icons .fa-envelope-open {
+        background: #efc050;
+    }
+
+    .contact .icons-container .icons .fa-map-marker-alt {
+        background: #d90429;
+    }
+
+    .contact .icons-container .icons h3 {
+        color: #000000;
+        font-size: 2rem;
+        padding: 1rem 0;
+    }
+
+    .contact .icons-container .icons p {
+        color: #4d4d4d;
+        font-size: 1.5rem;
+        line-height: 2;
+    }
+
+    .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+
+    .row .form {
+        padding: 2rem;
+        border: 0.1rem solid rgba(0, 0, 0, 0.1);
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 40rem;
+        flex: 1 1 40rem;
+        border-radius: 1%;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+
+    .row .form h3 {
+        font-size: 2.5rem;
+        padding-bottom: 1rem;
+        color: #000000;
+    }
+
+    .row .form .inputBox {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .row .form .inputBox input {
+        border-radius: 10px;
+        width: 49%;
+    }
+
+    .row .form .inputBox .box,
+    .row .form textarea {
+        padding: 1rem 1.2rem;
+        font-size: 1.6rem;
+        border: 0.1rem solid rgba(0, 0, 0, 0.1);
+        color: #000000;
+        text-transform: none;
+        margin: .7rem 0;
+        border-radius: 10px;
+    }
+
+    .row .form textarea {
+        width: 100%;
+        height: 15rem;
+        resize: none;
+    }
+
+    .row .map {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 40rem;
+        flex: 1 1 40rem;
+        width: 100%;
+    }
+</style>
+
+<body>
+
+
+    <!-- Header -->
+    <header id="header" class="shadow bg-light" style="height: 75px; padding: 5px 10px;">
+        <nav class="container navbar">
+            <a href="index.html" class="nav-brand text-dark">
+                Bloggen
+            </a>
+
+            <!-- toggle button -->
+            <button class="toggle-button">
+                <span><i class="fas fa-bars"></i></span>
+            </button>
+
+            <!-- collapse on toggle button click -->
+            <div class="collapse">
+                <ul class="navbar-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="#" class="nav-link">Blog</a>
+                    <a href="#" class="nav-link">Pages</a>
+                    <a href="#" class="nav-link">Categories</a>
+                    <a href="#" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </ul>
+            </div>
+
+            <!-- collapse on toggle button click -->
+            <div class="collapse">
+                <ul class="navbar-nav">
+                    <div class="search-box">
+                        <a href="#" class="nav-link"><i class="fas fa-search"></i></a>
+                    </div>
+                    <a href="https://www.facebook.com/profile.php?id=100029018010071" class="nav-link"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/SUMUltimate" class="nav-link"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/rahul_25141" class="nav-link"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/debasish-sinha-097664222/" class="nav-link"><i
+                            class="fab fa-linkedin"></i></a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- .Header -->
+
+
+
+
+    <div class="heading">
+        <h1>#lets_talk</h1>
+        <p class="primary">100% Customer satisfaction</p>
+        <p class="secondary">Your satisfaction is our pride</p>
+    </div>
+
+    <section class="contact">
+
+        <div class="icons-container">
+
+            <div class="icons">
+                <i class="fal fa-phone"></i>
+                <h3>our number</h3>
+                <p>+123-456-7890</p>
+                <p>+111-777-3333</p>
+            </div>
+
+            <div class="icons">
+                <i class="fal fa-envelope-open"></i>
+                <h3>our email</h3>
+                <p>123email@gmail.com</p>
+                <p>example@email.com</p>
+            </div>
+
+
+            <div class="icons">
+                <i class="fal fa-map-marker-alt"></i>
+                <h3>our address</h3>
+                <p>up noida india</p>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <form action="" class="form">
+                <h3 class="none">Get in touch</h3>
+                <div class="inputBox">
+                    <input type="text" placeholder="Enter your name" class="box">
+                    <input type="email" placeholder="Enter your email" class="box">
+                </div>
+
+                <div class="inputBox">
+                    <input type="number" placeholder="Enter your number" class="box">
+                    <input type="text" placeholder="Enter your subject" class="box">
+                </div>
+                <textarea placeholder="Your message" id="" cols="30" rows="10"></textarea>
+                <input type="submit" value="send message" class="btn">
+            </form>
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d223994.25250460726!2d76.95126319269946!3d28.692332875413104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d047309fff32f%3A0xfc5606ed1b5d46c3!2sDelhi!5e0!3m2!1sen!2sin!4v1645288680089!5m2!1sen!2sin"
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+    <!-- footer -->
+    <footer id="footer" style="padding: 0 0;">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-3">
+                    <h2 class="footer-title secondary-title">About Us</h2>
+
+                    <div class="secondary-title text-secondary">
+                        <p class="mt-2 ">
+                            We are pursuing Computer Science and Engineering (Batch: 2021-2025) from LPU.
+                        </p>
+
+                        <address>
+                            <i class="fas fa-map-marker-alt text-primary"></i>
+                            Phagwara, Punjab
+                        </address>
+
+                        <div class="phone">
+                            <i class="fas fa-mobile text-primary"></i>
+                            7701857404
+                        </div>
+
+                        <div class="email">
+                            <i class="fas fa-envelope text-primary"></i>
+                            ryrahul123456@gmail.com
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h2 class="footer-title secondary-title">Feature Post</h2>
+
+                    <div class="feature-post">
+                        <div class="flex-item">
+                            <article class="article">
+                                <div class="d-flex">
+                                    <a href="#">
+                                        <img src="./assets/img9.jpg" class="object-fit px-1" alt="">
+                                        <div class="px-1">
+                                            <a href="#" class="text-title display-2 text-dark">
+                                                Photos of LPU
+                                            </a>
+                                            <p class="secondary-title text-secondary display-3">
+                                                <span><i class="far fa-clock text-primary"></i> Clock Wed 02, 2021
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="flex-item">
+                            <article class="article">
+                                <div class="d-flex">
+                                    <a href="#">
+                                        <img src="./assets/img1.jpg" class="object-fit px-1" alt="">
+                                        <div class="px-1">
+                                            <a href="#" class="text-title display-2 text-dark">
+                                                Alicia & Ronald
+                                            </a>
+                                            <p class="secondary-title text-secondary display-3">
+                                                <span><i class="far fa-clock text-primary"></i> Clock Wed 02, 2021
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="flex-item">
+                            <article class="article">
+                                <div class="d-flex">
+                                    <a href="#">
+                                        <img src="./assets/img2.jpg" class="object-fit px-1" alt="">
+                                        <div class="px-1">
+                                            <a href="#" class="text-title display-2 text-dark">
+                                                Animal Testing
+                                            </a>
+                                            <p class="secondary-title text-secondary display-3">
+                                                <span><i class="far fa-clock text-primary"></i> Clock Wed 02, 2021
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h2 class="footer-title secondary-title">We post about</h2>
+
+                    <div class="tags">
+                        <div class="d-flex flex-wrap">
+                            <a href="#" class="nav-link btn bg-light">Travel</a>
+                            <a href="#" class="nav-link btn bg-light">Food</a>
+                            <a href="#" class="nav-link btn bg-light">Lifestyle</a>
+                            <a href="#" class="nav-link btn bg-light">Techonogy</a>
+                            <a href="#" class="nav-link btn bg-light">Fashion</a>
+                        </div>
+                    </div>
+
+                    <h2 class="footer-title secondary-title mt-2">Social</h2>
+
+                    <div class="tags social">
+                        <div class="d-flex flex-wrap">
+                            <a href="https://www.facebook.com/profile.php?id=100029018010071"
+                                class="nav-link btn bg-light"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/SUMUltimate" class="nav-link btn bg-light"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/rahul_25141" class="nav-link btn bg-light"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/debasish-sinha-097664222/"
+                                class="nav-link btn bg-light"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- copyrights  -->
+            <div class="copyrights">
+                <p class="text-center text-secondary display-2">
+                    © 2022 <a href="#" class="text-primary">Bloggen</a> - A Student Blog. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- .footer -->
+
+
+    <!-- masonry libray for horizontal grid -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"
+        integrity="sha512-JRlcvSZAXT8+5SQQAvklXGJuxXTouyq8oIMaYERZQasB8SBDHZaUbeASsJWpk0UUrf89DP3/aefPPrlMR1h1yQ=="
+        crossorigin="anonymous"></script>
+
+    <!-- swiper slider cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js"
+        integrity="sha512-1LlEYE0qExJ/GUfAJ0k2K2fB5sIvMv/q6ueo3syohvQ3ElWDQVSMUOf39cxaDWHtNu7M6lF6ZC1H6A1m3SvheA=="
+        crossorigin="anonymous"></script>
+
+    <!-- custom javascript main.js file -->
+    <script src="main.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

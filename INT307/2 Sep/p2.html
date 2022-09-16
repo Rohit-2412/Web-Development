@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<body>
+
+    <div id="app1">
+        <h1>{{message}}</h1>
+    </div>
+    <div id="app2">
+        <h1>{{message}}</h1>
+    </div>
+    <div id="app3">
+        <h1>{{message}}</h1>
+    </div>
+
+    <script>
+        var first = new Vue({
+            el: '#app1',
+            data: { message: 'We should work on instance' }
+        })
+        var second = new Vue({
+            el: '#app2',
+            data: { message: 'Hello Vue' }
+        })
+        var third = new Vue({
+            el: '#app3',
+            data: { message: 'We are having CA next week' }
+        })
+    </script>
+
+</body>
+
+</html>

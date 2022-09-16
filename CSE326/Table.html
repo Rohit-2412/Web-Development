@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<style>
+    #heading {
+        text-align: center;
+        font-size: 3rem;
+        color: slateblue;
+    }
+
+    .t1 {
+        height: 100px;
+        width: 150px;
+        border: 2px solid brown;
+        padding: 5px;
+    }
+
+    td {
+        border: 2px solid violet;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h1 id="heading">Table</h1>
+    <table class="t1">
+        <tr>
+            <td rowspan="2">A</td>
+            <td colspan="4" rowspan="2">0</td>
+        </tr>
+        <tr>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td colspan="3">C</td>
+            <td>D</td>
+            <td>E</td>
+        </tr>
+    </table>
+
+    <input type="checkbox" name="rohit" value="value">
+</body>
+
+
+</html>

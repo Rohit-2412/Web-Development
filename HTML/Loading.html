@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Comforter&family=Kalam:wght@400;700&family=Mukta:wght@300&family=Open+Sans&family=Playfair+Display:ital@0;1&family=Rock+Salt&family=Sacramento&family=Sawarabi+Mincho&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: gray;
+    }
+
+    h1 {
+        font-family: Rosemary;
+        position: relative;
+        font-size: 8rem;
+        color: whitesmoke;
+        -webkit-text-stroke: 0.25vw whitesmoke;
+        text-shadow: 5px 5px 7px darkgreen;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+    }
+
+    h1::before {
+        content: "Loading...";
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 80%;
+        height: 100%;
+        color: #329d55;
+        -webkit-text-stroke: 0vw #329d52;
+        border-right: 3px solid #329d52;
+        text-shadow: 5px 5px 10px white, 5px -5px 10px white;
+        overflow: hidden;
+        animation: animate 8s linear infinite;
+    }
+
+    @keyframes animate {
+
+        0%,
+        10%,
+        100% {
+            width: 0%;
+        }
+
+        70%,
+        90% {
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <h1>Loading...</h1>
+</body>
+
+</html>

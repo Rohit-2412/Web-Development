@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniamtion</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background-color: whitesmoke;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .circle {
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;
+        background-image: linear-gradient(0deg, var(--blue), var(--pink));
+        animation-name: example;
+        margin-top: 10px;
+        margin-left: 10px;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease;
+    }
+
+    :root {
+        --blue: blueviolet;
+        --pink: rgb(228, 88, 111, 0.8);
+        --violet: rgba(199, 21, 134, 0.884);
+    }
+
+    @keyframes example {
+
+        /* 1st */
+        0% {
+            background-image: linear-gradient(45deg, var(--blue), var(--pink));
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        /* 2nd */
+        20% {
+            background-image: linear-gradient(-45deg, var(--blue), var(--pink));
+            margin-top: 440px;
+            margin-left: 17%;
+        }
+
+        /* 3rd */
+        40% {
+            background-image: linear-gradient(90deg, var(--blue), var(--pink));
+            margin-top: 20px;
+            margin-left: 34%;
+        }
+
+        /* 4th */
+        60% {
+            background-image: linear-gradient(-45deg, var(--blue), var(--pink));
+            margin-top: 440px;
+            margin-left: 52%;
+        }
+
+        /* 5th */
+        80% {
+            background-image: linear-gradient(-90deg, var(--blue), var(--pink));
+            margin-top: 20px;
+            margin-left: 69%;
+        }
+
+        /* 6th */
+        100% {
+            background-image: linear-gradient(45deg, var(--blue), var(--pink));
+            margin-top: 440px;
+            margin-left: 87%;
+        }
+    }
+
+
+    .line {
+        position: absolute;
+        align-self: flex-start;
+        height: 10px;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 15px;
+        margin-top: 33.5rem;
+        /* background-color: var(--violet); */
+        background-image: linear-gradient(45deg, var(--blue), var(--pink));
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="circle"></div>
+        <div class="line"></div>
+    </div>
+</body>
+
+</html>

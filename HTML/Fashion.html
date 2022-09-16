@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Josefin+Sans:wght@300&family=Playfair+Display&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 32vh;
+        z-index: 1;
+    }
+
+    .sq1 {
+        height: 50vh;
+        width: 50vh;
+        border-radius: 15px;
+        margin: 35px;
+    }
+
+    .image {
+        height: 50vh;
+        width: 50vh;
+    }
+
+    .sq2 {
+        height: 50vh;
+        width: 50vh;
+        background-color: blanchedalmond;
+        border-radius: 15px;
+        box-shadow: 5px 5px 10px whitesmoke, -5px -5px 10px whitesmoke, -5px 5px 10px whitesmoke, 5px -5px 10px whitesmoke;
+    }
+
+    .circle {
+        background-color: rgba(0, 0, 255, 0.719);
+        border-radius: 100%;
+        border: 20px solid #f75e7c;
+        /* background-color: #f75e7c; */
+
+        height: 100px;
+        width: 100px;
+        z-index: -1;
+        margin-left: -102px;
+        margin-bottom: -310px;
+    }
+
+    body {
+        background-color: #3b51f7;
+    }
+
+    .image {
+        border-radius: 15px;
+        box-shadow: 15px 15px 10px #c4b7af, -15px -15px 10px #c4b7af, -15px 15px 20px #c4b7af, 15px -15px 20px #c4b7af;
+    }
+
+    .text {
+        width: 100px;
+        height: 100px;
+    }
+
+    .bold {
+        font-size: 2.85rem;
+        font-weight: bold;
+    }
+
+    .text {
+        height: 100px;
+        width: 50px;
+        padding-left: 20px;
+        color: rgb(238, 50, 81);
+    }
+
+    .heading,
+    p {
+        font-family: 'Playfair Display', serif;
+    }
+
+    p {
+        margin-top: 50px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding-left: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        text-decoration: underline;
+    }
+
+    .btn {
+        background-color: rgb(132, 40, 218);
+        margin-left: 30px;
+        border-radius: 50px;
+        height: 40px;
+        text-transform: uppercase;
+        text-align: center;
+        color: whitesmoke;
+        letter-spacing: 0.15rem;
+        /* font-family: 'Josefin Sans', serif; */
+        font-family: 'Arial', serif;
+        width: 150px;
+
+    }
+</style>
+
+<!-- <body>
+    <div class="square">
+        <div id="c" class="circle">
+            <div id="c" class="circle2"></div>
+    </div>
+    </div> -->
+<div class="container">
+    <div class="sq1"><img class="image" src="fig.jpg" alt=""></div>
+    <div class="sq2">
+        <div class="text">
+            <h1 class="heading"><span class="bold">Creative</span> Branding Agency</h1>
+        </div>
+        <p>Sample Text. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium unde eos, aliquid
+            molestias
+            repellat minus.</p>
+
+        <p>Image from <a href="#" class="link">Freepik</a></p>
+        <button class="btn">Learn more</button>
+    </div>
+    <div class="circle"></div>
+</div>
+
+
+</body>
+
+</html>

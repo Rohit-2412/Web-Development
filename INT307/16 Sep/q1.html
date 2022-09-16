@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Vue.js Template</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="q1.css">
+</head>
+
+<body>
+    <div id="app">
+        <h1 id="name">University : {{University}}</h1>
+        <h2 id="course">Grade : {{Grade}}</h2>
+        <div id="content" v-html="htmlContent"></div>
+        <div id="flex">
+            <img v-bind:src="imgsrc">
+            <img v-bind:src="imgsrc">
+        </div>
+    </div>
+    </div>
+</body>
+<script src="q1.js"></script>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue instance</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<style>
+    h1 {
+        font-size: 90px;
+        text-align: center;
+        font-family: sans-serif;
+        color: rebeccapurple;
+    }
+
+    h2 {
+        font-size: 40px;
+        margin: 20px;
+        padding: 10px;
+        text-align: center;
+        font-family: "Consolas";
+        color: cornflowerblue;
+    }
+</style>
+
+<body style="background-color: snow;">
+    <h1>Vue instances</h1>
+    <ul style="list-style: none;">
+        <li>
+            <h2 onclick="handleClick1()" id="first">{{message}}
+            </h2>
+        </li>
+        <li>
+            <h2 style="display: none; font-size: 45px; color: cadetblue; font-family: 'Fira Code';"
+                onclick="handleClick2()" id="second">
+                {{message}}</h2>
+        </li>
+        <li>
+            <h2 style="display: none; font-size: 55px; color: red; font-family: 'Monaco';" id="third">{{message}}</h2>
+        </li>
+    </ul>
+</body>
+<script>
+    new Vue({
+        el: "#first",
+        data: { message: "Hello Vue.js" }
+    })
+    new Vue({
+        el: "#second",
+        data: { message: "INT307-CA1" }
+    })
+    new Vue({
+        el: "#third",
+        data: { message: "Working with HTML, CSS, Javascript with Vue.js in a single file" }
+    })
+
+    let v1 = document.getElementById('first');
+    let v2 = document.getElementById('second');
+    let v3 = document.getElementById('third');
+
+    function handleClick1() {
+        alert("Displaying second instance")
+        v2.style.display = "";
+    }
+
+    function handleClick2() {
+        alert("Displaying third instance")
+        v3.style.display = "";
+    }
+</script>
+
+</html>

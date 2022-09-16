@@ -1,0 +1,63 @@
+<!-- Create an event when user clicks on the second button and the messages should get displayed
+    "We should focus on studies!"
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let numOfClick = 0;
+    function func() {
+        numOfClick++;
+        if (numOfClick % 4 == 0) {
+            alert("You clicked on Button fourth time!")
+        }
+        if (numOfClick % 3 == 0) {
+            alert("You clicked on Button third time!")
+        }
+        if (numOfClick % 2 == 0) {
+            alert("You clicked on Button second time!")
+        }
+        if (numOfClick % 1 == 0) {
+            alert("You clicked on Button first time!")
+        }
+    }
+    function func1() {
+        alert("You clicked on Button!")
+    }
+    function func2() {
+        alert("Hello, Good Morning")
+    }
+    function func3() {
+        alert("INT 307")
+    }
+    function func4() {
+        alert("Good Evening")
+    }
+</script>
+<style>
+    button {
+        font-size: 1.5rem;
+        color: #145;
+        display: block;
+        margin: 2rem;
+        width: 350px;
+        padding: 15px;
+    }
+</style>
+
+<body>
+    <button onclick="func()">Random Message</button>
+    <button onclick="func1()">Message 1</button>
+    <button onclick="func2()">Message 2</button>
+    <button onclick="func3()">Message 3</button>
+    <button onclick="func4()">Message 4</button>
+</body>
+
+</html>

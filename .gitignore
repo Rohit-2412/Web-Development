@@ -1,0 +1,9 @@
+.vscode
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.svg
+node_modules
+/node_modules
+/node_modules/

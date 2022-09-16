@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+</head>
+<style>
+    .heading {
+        font-size: 60px;
+        text-align: center;
+        color: cornflowerblue;
+        font-weight: 700;
+        font-family: "Arial";
+    }
+
+    .sub-heading {
+        font-size: 40px;
+        text-align: center;
+        color: tomato;
+        font-weight: 700;
+        font-family: "Arial";
+    }
+
+    #para {
+        font-size: 25px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    #para2 {
+        font-size: 30px;
+        font-family: 'Times New Roman', Times, serif;
+        padding: 10px;
+        background-color: #98b4d4;
+    }
+
+    span {
+        font-size: 20px;
+    }
+
+    :root {
+        /* colors section */
+        --emerald: #009b77;
+        --tomato: #dd4124;
+        --pink: #d65076;
+        --sand: #efc050;
+        --blue: #5b5ea6;
+        --lily: #e15d44;
+        --rose: #c3447a;
+        --lightblue: #98b4d4;
+        --coral: #ff6f61;
+        --classic-blue: #34568b;
+    }
+
+    .container {
+        padding: 20px;
+        background-color: #98b4d4;
+        margin-bottom: 50px;
+        box-sizing: border-box;
+    }
+</style>
+
+<body>
+
+    <h1 class="heading">Webpage showing Mouse events</h1>
+    <div class="container">
+        <h2 class="sub-heading">Mouse over event</h2>
+        <span class="subtext"><b>Event: </b>A pointing device is moved onto the element that has the listener attached
+            or onto one of its children. <br>
+            <b>Event name:</b> Mouseover <br>
+            <b>Event handler: </b> onmouseover <br>
+        </span>
+        <span>Hover your mouse cursor below: </span>
+        <p onmouseover="handleMouseOver()" id="para">This is just a random paragraph with some random words without any
+            meaning or sense. Only for demo purpose for CA of INT-307</p>
+    </div>
+
+    <div class="container">
+        <h2 class="sub-heading">Mouse Leave event</h2>
+        <span class="subtext"><b>Event: </b>A pointing device is moved off the element that has the listener attached.
+            or onto one of its children. <br>
+            <b>Event name:</b> Mouseleave <br>
+            <b>Event handler: </b> onmouseleave<br>
+        </span>
+        <span>Hover your mouse cursor below: </span>
+        <p onmouseleave="handleMouseLeave()" id="para2">This is just another random paragraph with some random words
+            without any
+            meaning or sense. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet repudiandae dicta dolorem
+            iusto cupiditate et rem atque harum quidem accusamus!</p>
+    </div>
+</body>
+<script>
+    let count = 0;
+    function handleMouseOver() {
+        count++;
+        let paragraph = document.getElementById('para')
+        if (count % 2 === 0) paragraph.style.color = "palevioletred";
+        else paragraph.style.color = "coral";
+    }
+    let x = 0;
+    function handleMouseLeave() {
+        x++;
+        let paragraph = document.getElementById('para2')
+        if (x % 2 === 0) {
+            paragraph.style.fontSize = "30px";
+            paragraph.style.color = "orange";
+        }
+        else {
+            paragraph.style.fontSize = "40px";
+            paragraph.style.color = "#009b77";
+        }
+    }
+</script>
+
+</html>

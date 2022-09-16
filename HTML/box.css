@@ -1,0 +1,16 @@
+.navbar {
+  background-color: darkblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+.nav-items {
+  text-align: center;
+}
+a {
+  display: inline;
+  margin: 20px;
+  text-decoration: none;
+  color: whitesmoke;
+}

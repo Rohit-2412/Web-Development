@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Simple form</h1>
+    <form onsubmit="validate(this)">
+        <label for="name">Enter Username &nbsp;</label>
+        <input type="text" name="username" id="name">
+        <br>
+        <br>
+        <br>
+        <label for="password">Enter password &nbsp;&nbsp;</label>
+        <input type="text" name="pass" id="password">
+        <br>
+        <br>
+        <label for="number">Enter mobile number </label>
+        <input type="text" name="number" id="number">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+<script>
+
+    function validate(thisform) {
+        var name = thisform.name.value;
+        var pass = thisform.password.value;
+        var number = thisform.number.value;
+
+        // if (name == "" || name == null) {
+        //     alert("username can't be empty!");
+        // }
+
+        // if (pass == "" || pass == null) {
+        //     alert("password can't be empty!");
+        // }
+        console.log((number.length));
+        if (number == null || number == "") {
+            alert("Please enter a valid mobile number");
+        }
+        // if(isNaN(number))
+        // {
+        //     alert("Not a valid mobile number");
+        // }
+    }
+
+</script>
+
+</html>

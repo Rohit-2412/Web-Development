@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Objects</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+        font-size: 3rem;
+        text-transform: capitalize;
+    }
+
+    table {
+        padding: 1rem;
+    }
+
+    td {
+        min-width: 200px;
+        border: 3px dotted dodgerblue;
+        text-align: center;
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    #first {
+        color: red;
+    }
+
+    #second {
+        color: blue;
+    }
+
+    #third {
+        color: green;
+    }
+
+    img {
+        height: 300px;
+        width: 300px;
+    }
+</style>
+
+<body>
+    <!--     
+    <h1>table</h1>
+    <table>
+        <tr>
+            <td>Image</td>
+            <td>Color</td>
+        </tr>
+        <tr>
+            <td><img src="../images/plate-1.png"></td>
+            <td id="first"></td>
+        </tr>
+        <tr>
+            <td><img src="../images/plate-2.png"></td>
+            <td id="second"></td>
+        </tr>
+        <tr>
+            <td><img src="../images/plate-3.png"></td>
+            <td id="third"></td>
+        </tr>
+    </table> -->
+
+    <h1 id="text">Hello World</h1>
+    <button onclick="change()" value="clicked">Click</button>
+</body>
+
+<script>
+
+
+    function change() {
+        var t = document.getElementById("text");
+        t.innerHTML = "Hello world ! <br> Welcome to JavaScript!";
+    }
+
+    function checkNode() {
+        var t = document.getElementById("one");
+        var value = t.nodeType;
+        // if (value == 1) {
+        //     document.write("Element Node");
+        // }
+        // else if (value == 2) {
+        //     document.write("Attribute Node");
+        // }
+
+
+
+    }
+
+    function checkChild() {
+        var t = document.getElementsByTagName();
+        var hasChild = t.hasChildNodes;
+        if (hasChild) {
+            alert("It has child Nodes");
+        }
+        else {
+            alert("No child nodes");
+        }
+    }
+
+    // function student_details(Name, cls, RegNo) {
+    //     this.Name = Name;
+    //     this.cls = cls;
+    //     this.RegNo = RegNo;
+
+    // }
+
+
+    // var s1 = new student_details("Ram", "B.Tech", 120011);
+    // document.write(s1.Name + " " + s1.cls + " " + s1.RegNo);
+
+    // function color_name(first, second, third) {
+    //     this.first = first;
+    //     this.second = second;
+    //     this.third = third;
+    // }
+
+    // var colors = new color_name("Red", "Blue", "Green");
+
+    // document.getElementById("first").innerHTML = colors.first;
+    // document.getElementById("second").innerHTML = colors.second;
+    // document.getElementById("third").innerHTML = colors.third;
+
+
+</script>
+
+</html>

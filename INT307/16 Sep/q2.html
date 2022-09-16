@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Vue.js Template</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="q2.css">
+</head>
+
+<body>
+    <div id="app">
+        <h1 id="name">{{University}}</h1>
+        <center> <img v-bind:src="imgsrc" alt="" height="200"></center>
+        <h2 id="course">Admissions offered</h2>
+        <ul style="list-style: none;" class="list">
+            <a target="_blank" class="li_item" href="https://www.lpu.in/programmes/regular/12th">{{Program1}}</a>
+            <a target="_blank" class="li_item" href="https://www.lpu.in/programmes/regular/12th">{{Program2}}</a>
+            <a target="_blank" class="li_item" href="https://www.lpu.in/programmes/regular/12th">{{Program3}}</a>
+        </ul>
+    </div>
+    <div class="line"></div>
+    </div>
+    <div id="app2">
+        <h1 id="name">{{University}}</h1>
+        <center> <img v-bind:src="imgsrc" alt="" height="200"></center>
+        <h2 id="course">Admissions offered</h2>
+        <ul style="list-style: none;" class="list">
+            <a target="_blank" class="li_item"
+                href="https://cucet.cuchd.in/?type=gsn-cucet&gclid=Cj0KCQjwmouZBhDSARIsALYcouqq0CtjOf9edy9OHkEdsXW8A269TeoH7TIUOFzM2gTmBDWZfUVcTwoaAq00EALw_wcB">{{Program1}}</a>
+            <a target="_blank" class="li_item"
+                href="https://cucet.cuchd.in/?type=gsn-cucet&gclid=Cj0KCQjwmouZBhDSARIsALYcouqq0CtjOf9edy9OHkEdsXW8A269TeoH7TIUOFzM2gTmBDWZfUVcTwoaAq00EALw_wcB">{{Program2}}</a>
+            <a target="_blank" class="li_item"
+                href="https://cucet.cuchd.in/?type=gsn-cucet&gclid=Cj0KCQjwmouZBhDSARIsALYcouqq0CtjOf9edy9OHkEdsXW8A269TeoH7TIUOFzM2gTmBDWZfUVcTwoaAq00EALw_wcB">{{Program3}}</a>
+        </ul>
+    </div>
+    </div>
+</body>
+<script src="q2.js"></script>
+
+</html>

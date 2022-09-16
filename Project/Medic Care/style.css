@@ -1,0 +1,466 @@
+:root {
+  /* fonts section */
+  --heading1: "Rock Salt", cursive;
+  --cursive2: "Cedarville Cursive", cursive;
+  --handwriting1: "Playfair Display", serif;
+  --basic1: "Open Sans", sans-serif;
+  --basic2: "Mukta", sans-serif;
+  --italic1: "Kalam", cursive;
+  --cursive1: "Comforter", cursive;
+
+  /* colors section */
+  --emerald: #009b77;
+  --tomato: #dd4124;
+  --pink: #d65076;
+  --sand: #efc050;
+  --blue: #5b5ea6;
+  --lily: #e15d44;
+  --rose: #c3447a;
+  --lightblue: #98b4d4;
+  --coral: #ff6f61;
+  --classic-blue: #34568b;
+}
+* {
+  padding: 0;
+  margin: 0;
+  /* font-family: var(--basic1); */
+}
+.blue {
+  color: darkorchid;
+}
+
+body {
+  background-color: whitesmoke;
+}
+a {
+  text-decoration: none;
+  color: grey;
+  font-size: 1.05rem;
+}
+a:hover {
+  text-decoration: none;
+  color: black;
+  font-size: 1.25rem;
+}
+.active {
+  color: black;
+}
+/* navbar */
+/* navbar ht and brdth */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px auto;
+  align-items: center;
+  background-color: whitesmoke;
+  color: black;
+  height: 70px;
+}
+/* heading and text below */
+.title {
+  font-size: 2rem;
+  color: blueviolet;
+  font-weight: 600;
+  font-family: Geneva, Tahoma, sans-serif;
+}
+.title::after {
+  display: flex;
+  margin-top: -10px;
+  justify-content: center;
+  content: "Health Specalist";
+  color: initial;
+  font-size: 1rem;
+  padding-top: 5px;
+}
+/* Navbar items property */
+.nav-items {
+  margin: auto 50px;
+  color: rgb(193, 181, 181);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* front section */
+/* main image */
+#main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: turquoise; */
+  background: url(./images/slider/doctor-s-hand-holding-stethoscope-closeup.jpg)
+    no-repeat center center/cover;
+  width: 95%;
+  margin: 0 auto;
+  height: 85%;
+}
+/* right side box on the front image */
+.side-box {
+  display: inline-block;
+  max-height: 40%;
+  width: 50%;
+  margin-top: 355px;
+  margin-left: 760px;
+  background-color: ghostwhite;
+}
+#main .h-secondary,
+.h-secondary {
+  font-size: 3rem;
+  margin-left: 20px;
+  padding: 10px 0;
+  padding-top: 0;
+}
+.side-box p {
+  margin-left: 20px;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.learn {
+  box-sizing: border-box;
+  margin-left: 20px;
+  padding: 10px 0;
+  height: 40px;
+  width: 125px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.side-box span {
+  margin-left: 20px;
+}
+.third-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 35px 25px;
+}
+.third-section .left {
+  margin-right: auto;
+  height: 30%;
+  width: 50%;
+  overflow: hidden;
+}
+.third-section .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 245px;
+  width: 175px;
+  height: 175px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5),
+    -3px -3px 5px rgba(255, 255, 255, 0.4), inset 5px 5px 3px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 3px rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  /* overflow: hidden; */
+}
+.right .h-secondary {
+  margin-left: 40px;
+  color: var(--blue);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 5rem;
+  font-weight: bold;
+  margin-left: 4px;
+  margin-top: 0;
+}
+.right h3 {
+  height: 90px;
+  width: 105px;
+  font-size: 24px;
+  position: absolute;
+  margin-left: 68px;
+  margin-top: 45px;
+  box-sizing: border-box;
+}
+.third-section p {
+  margin-left: 40px;
+  word-spacing: 0.5rem;
+}
+/* utility classes */
+.fourth-section {
+  display: flex;
+  justify-content: space-around;
+}
+.fourth-section img {
+  width: 650px;
+  height: 435px;
+  /* border: 2px solid red; */
+}
+
+.timeline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: peachpuff; */
+}
+/* our timeline heading */
+.h-secondary {
+  /* border: 2px solid red; */
+  padding: 20px auto;
+  margin: 30px auto;
+  margin-top: 60px;
+}
+
+#left {
+  /* border: 2px solid red; */
+  height: 100vh;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.lbox {
+  /* make it max height: */
+  margin-left: 550px;
+  height: 150px;
+  width: 350px;
+  margin: 10px;
+  /* background-color: var(--blue); */
+  border-radius: 25px 0 25px 35px;
+  text-align: right;
+}
+
+.strip {
+  height: 30%;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: right;
+}
+.text {
+  background-color: ghostwhite !important;
+}
+#mid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 100vh;
+  width: 10%;
+}
+.mid-circle {
+  margin: auto auto;
+  height: 100px;
+  width: 100px;
+  margin-top: -5px;
+}
+.mid-circle img {
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 15px;
+}
+
+#right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: auto;
+  /* border: 4px solid black; */
+  height: 100vh;
+  width: 40%;
+  text-align: left !important;
+  margin-left: -17.5px;
+}
+#right .strip {
+  text-align: left !important;
+}
+.rbox {
+  height: 150px;
+  width: 350px;
+  margin: 10px;
+  background-color: var(--pink);
+  border-radius: 0px 25px 25px 35px;
+}
+
+#card-gallery {
+  /* background-color: var(--lily); */
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px;
+}
+#patients-column .p-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
+#patients-column .box:hover {
+  width: 325px;
+  height: 200px;
+}
+#patients-column .box {
+  width: 300px;
+  max-height: 185px;
+  background-color: black;
+  color: whitesmoke;
+  padding-left: 15px;
+  padding-top: 10px;
+  border-radius: 15px;
+}
+#patients-column .service-heading {
+  font-size: 1.25rem;
+  color: blue;
+  text-align: left;
+  margin-bottom: 5px;
+  /* border: 2px solid brown; */
+}
+#patients-column p {
+  margin: 15px 0;
+}
+#patients-column .info-section {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+#patients-column .patient-pic {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+#patients-column img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+#patients-column .name {
+  margin-left: 20px;
+}
+.grey {
+  color: grey;
+}
+/* appointment section */
+#appointment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 25px;
+}
+#appointment h2 {
+  font-size: 2rem;
+  margin-top: 30px;
+}
+#appointment td {
+  padding: 5px 30px;
+  padding-left: 0;
+}
+#appointment table {
+  /* border: 3px solid black; */
+  width: 500px;
+}
+input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1.5px solid black;
+  padding: 5px;
+  background-color: ghostwhite;
+  /* font-family: ; */
+}
+textarea {
+  border: 0;
+  margin: 0 auto;
+  border-bottom: 1.5px solid black;
+  width: 33.33%;
+}
+.btn span {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.btn {
+  background-color: black;
+  color: white;
+  margin-top: 25px;
+  width: 200px;
+  height: 45px;
+  cursor: pointer;
+}
+/* footer area */
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: ghostwhite;
+  height: 45vh;
+  width: 100%;
+}
+.opening-hours {
+  width: 350px;
+  height: 155px;
+}
+.opening-hours h3 {
+  font-size: 1.55rem;
+  margin-bottom: 15px;
+}
+.opening-hours table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.right {
+  text-align: right;
+}
+.opening-hours td {
+  border-bottom: 2px solid grey;
+  /* background-color: yellow; */
+  padding: 12.5px 0;
+}
+/* our clinic section */
+.clinic {
+  width: 300px;
+  height: 155px;
+  display: flex;
+  text-align: left;
+  justify-content: start;
+  flex-direction: column;
+}
+.clinic h4,
+h6 {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+.clinic h4 {
+  margin-top: 0px;
+  font-size: 1.55rem;
+}
+.clinic h6 {
+  color: gray;
+  font-size: 0.85rem;
+}
+/* social media section */
+.socials {
+  width: 300px;
+  height: 155px;
+}
+.socials h4 {
+  font-size: 1.55rem;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+.icon-list {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-left: 2px;
+}
+.icon-list img {
+  height: 20px;
+  width: 20px;
+  margin: 7px;
+  cursor: pointer;
+}
+.center {
+  text-align: center;
+}
+.shadow {
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
+}

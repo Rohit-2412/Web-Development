@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function student(name, cls, id) {
+        this.name = name;
+        this.cls = cls;
+        this.id = id;
+    }
+
+    var s1 = new student("Some Name", 12, 1123);
+
+    document.write("Name : " + s1.name + "<br>" + "Class : " + s1.cls + "<br>" + "Id : " + s1.id);
+</script>
+<style>
+    * {
+        font-size: 2rem;
+        text-align: center;
+    }
+</style>
+
+<body>
+
+</body>
+
+</html>
