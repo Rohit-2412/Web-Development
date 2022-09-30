@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computed Property</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="app1">
+        <comp></comp>
+    </div>
+
+    <div id="app2">
+    </div>
+
+    <div id="app3" class="my-4">
+        <h1 class="text-center text-primary">{{heading1}}</h1>
+        <div style="border-radius:25%">
+            <imagecomponent></imagecomponent>
+        </div>
+
+        <p class="bg-success p-3 m-5">{{paragraph1}}</p>
+        <h1 class="text-center text-primary">{{heading2}}</h1>
+
+        <p class="bg-warning p-3 m-5">{{paragraph2}}</p>
+        <h1 class="text-center text-primary">{{heading3}}</h1>
+
+        <p class="bg-danger p-3 m-5">{{paragraph3}}</p>
+
+        <p class="p-4">{{combinedPara}}</p>
+    </div>
+
+</body>
+<script>
+    Vue.component('comp', {
+        template: `<div class='text-center' v-on:mouseover="handleMouseover()" v-on:mouseout="getOriginal()"><center><h1 class="bg-primary p-2 w-75">Welcome to <span id="name">{{name}}</span></h1></center><h2 class='bg-danger p-2'>We're using component, instance and computed properties</h2></div>`,
+        data: function () {
+            return {
+                name: "Vue.js"
+            }
+        },
+        methods: {
+            handleMouseover: function () {
+                this.name = "Vue.js"
+            },
+            getOriginal: function () {
+                this.name = "Components"
+            }
+        }
+    });
+
+    Vue.component('imagecomponent', {
+        template: '<center><img src="https://images.pexels.com/photos/305821/pexels-photo-305821.jpeg?auto=compress&cs=tinysrgb&w=600" alt="image" width="50%"></center>'
+    })
+    let instance1 = new Vue({
+        el: "#app1"
+    })
+
+    let instance2 = new Vue({
+        el: "#app2"
+    })
+
+    let instance3 = new Vue({
+        el: "#app3",
+        data: {
+            heading1: "Plantation",
+            paragraph1: "The tree plantation helps majorly to the environment as it reduces the pollution and other toxic gases in the atmosphere. Trees inhale carbon dioxide and exhale oxygen which helps the living organisms to breathe for survival. Planting trees helps to increase the oxygen level and reduce the unwanted gases.",
+            heading2: "Environmental",
+            paragraph2: "Benefits The tree plantation helps majorly to the environment as it reduces the pollution and other toxic gases in the atmosphere. Trees inhale carbon dioxide and exhale oxygen which helps the living organisms to breathe for survival. Planting trees helps to increase the oxygen level and reduce the unwanted gases. Finally, it helps in decreasing the global warming effect.",
+            heading3: "Plantation",
+            paragraph3: "The tree plantation helps majorly to the environment as it reduces the pollution and other toxic gases in the atmosphere. Trees inhale carbon dioxide and exhale oxygen which helps the living organisms to breathe for survival. Planting trees helps to increase the oxygen level and reduce the unwanted gases."
+        },
+        computed: {
+            combinedPara: function () {
+                return this.paragraph1 + this.paragraph2 + this.paragraph3
+            }
+        }
+    })
+</script>
+
+</html>
