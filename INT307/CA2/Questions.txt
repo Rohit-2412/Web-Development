@@ -1,0 +1,24 @@
+FOR EVEN ROLL NUMBER
+1.	Create a Vue.js program to show the functionality of events.
+
+2.	Create 4 components using Vue.js and implement CSS to the document. 
+
+3.	Implement the watch property in a Vue.js program.
+
+FOR ODD ROLL NUMBER
+
+1.	Write a Vue.js program to show the functionality of instances.
+// 2 instances
+// 1. onclick 3 colors
+// 2. hover event 
+// int 303 CA2 -> Sonali assignment
+
+2.	Write a code to implement the get set properties in Vue.js program.  
+// watch inr => usd , pound
+// button (convert)
+
+3.	Use instances component and watch property in a single Vue.js program.
+// enter 1st NUMBER
+// enter operation + - * / {alert}
+// enter 2nd NUMBER
+// result = value {odd / even}

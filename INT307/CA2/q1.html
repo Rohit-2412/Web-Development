@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Question 1</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="events">
+        <!-- heading for Events -->
+        <h1 class="text-center text-warning mx-3">Functionality of Events</h1>
+
+        <!-- heading for click event -->
+        <h3 class="mx-3">Click Event</h3>
+        <!-- button for toggling the state of paragaph -->
+        <center> <button class="mx-3 btn btn-info rounded-pill my-3 btn-lg" v-on:click="clickEvent">Toggle</button>
+        </center>
+        <!-- div container for holding the paragraph -->
+        <div class="border border-success border-4 mx-3" style="height: 60px;">
+            <p id="paragraph1" class="fs-3 mx-2">{{message1}} </p>
+        </div>
+        <!-- container to store buttons -->
+        <div class="d-flex justify-content-center my-3">
+
+            <button class="mx-3 btn btn-outline-danger rounded-pill my-3" v-on:click="changeShape">
+                Click here to change the shape</button>
+            <button class="mx-3 btn btn-outline-success rounded-pill my-3" v-on:click="changeColor">
+                Click here to change the color</button>
+        </div>
+
+        <!-- container to store squares -->
+        <div class="d-flex justify-content-center">
+            <square></square>
+            <square></square>
+            <square></square>
+        </div>
+
+        <!-- heading for hover event -->
+        <h3 class="mx-3 mt-5">Hover Event</h3>
+        <div class="border border-info border-4 mx-3 p-2">
+            <p id="paragraph2" class="fs-3 mx-2" @mouseover="handleHover">{{message2}} </p>
+        </div>
+
+        <!-- heading for Mouse enter and mouse out event -->
+        <h3 class="mx-3 mt-5">MouseOver and MouseOut Event</h3>
+        <div class="border border-warning border-4 mx-3 p-2">
+            <p id="paragraph3" class="fs-3 mx-2" @mouseover="handleMouseEnter" @mouseleave="handleMouseLeave">
+                {{message3}} </p>
+        </div>
+
+        <!-- keyboard event -->
+        <h3 class="mx-3 mt-5">Key press event</h3>
+        <div class="border border-primary border-4 mx-3 p-3">
+            <label for="input_tag">Enter some text: </label>
+            <input @keyup.enter="success" id="input_tag" v-model="text" />
+            <span id="successMessage">{{successMessage}}</span>
+        </div>
+
+    </div>
+</body>
+<!-- Javascript code -->
+<script>
+    Vue.component("square", {
+        template: "<div class='square bg-warning p-3 my-2 mx-5' style='height: 100px; width: 100px;'></div>"
+    })
+    new Vue({
+        el: "#events",
+        data: {
+            message1: "This is a paragraph which will toggle its state upon clicking on the Button",
+            message2: "This is a paragraph which will toggle its color from Black to Tomato upon hovering on the text",
+            message3: "There will be 3 CAs for INT 303",
+            successMessage: "",
+        },
+        methods: {
+            clickEvent: function () {
+                let para = document.getElementById("paragraph1");
+                if (para.style.display === "none") {
+                    para.style.display = "block";
+                } else {
+                    para.style.display = "none";
+                }
+            },
+            changeShape: function () {
+                let square = document.getElementsByClassName("square");
+                if (square[0].style.borderRadius === "0px") {
+                    for (let i = 0; i < square.length; i++) {
+                        square[i].style.borderRadius = "50%";
+                    }
+                }
+                else {
+                    for (let i = 0; i < square.length; i++) {
+                        square[i].style.borderRadius = "0px";
+                    }
+                }
+            },
+            changeColor: function () {
+                let square = document.getElementsByClassName("square");
+                for (let i = 0; i < square.length; i++) {
+                    square[i].classList.toggle("bg-danger");
+                }
+            },
+            handleHover: function () {
+                let para = document.getElementById("paragraph2");
+                if (para.style.color === "tomato")
+                    para.style.color = "black";
+                else
+                    para.style.color = "tomato";
+            },
+            handleMouseEnter: function () {
+                let para = document.getElementById("paragraph3");
+                para.innerText = "There will be 4 CAs for INT 307";
+            },
+            handleMouseLeave: function () {
+                let para = document.getElementById("paragraph3");
+                para.innerText = "There will be 3 CAs for INT 303";
+            },
+            success: function () {
+                let span = document.getElementById("successMessage");
+                if (this.text.length > 0)
+                    span.innerText = "You Entered: " + this.text;
+                else
+                    span.innerText = "";
+            }
+        },
+        watch: {
+            text: function (val) {
+                this.text = val
+            }
+        }
+    })
+</script>
+
+</html>
