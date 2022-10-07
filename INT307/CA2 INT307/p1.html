@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Question 1 - Components and Computed Properties</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</head>
+<style>
+    body {
+        background-image: url("https://images.pexels.com/photos/965121/pexels-photo-965121.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+        background-size: cover;
+    }
+</style>
+
+<body>
+    <div id="app">
+        <comp></comp>
+    </div>
+</body>
+<script>
+    Vue.component('comp', {
+        template: `
+        <div>
+            <h1 class="text-center text-primary my-3">Components and Computed Properties</h1>
+            <div class="container d-flex justify-content-between m-5">
+                <div>
+                    <label for="fname" class="fs-3 fw-bold text-danger">Enter First Name</label>
+                    <input type="text" id="fname" v-model="first">
+                    </div>
+                <div>
+                    <label for="lname" class="fs-3 fw-bold text-danger">Enter Second Name</label>
+                    <input type="text" id="lname" v-model="last">
+                </div>
+            </div>
+                
+            <h3 class="fs-3 text-center text-success">Your Name in Original: {{finalName}}</h3>
+            <h3 class="fs-3 text-center text">Your Name in Reverse: {{revName}}</h3>
+            <h3 class="fs-3 text-center text-success">Total Length: {{length}}</h3>
+            <h3 class="fs-3 text-center text">Total Uppercase Characters: {{upper}}</h3>
+            <h3 class="fs-3 text-center text-success">Total Lowercase Characters: {{lower}}</h3>
+        </div>
+        `,
+        data: function () {
+            return {
+                first: "",
+                last: "",
+            }
+        },
+        computed: {
+            finalName: function () {
+                return this.first + " " + this.last
+            },
+            revName: function () {
+                return (this.first + " " + this.last).split(' ').reverse('').join(" ")
+            },
+            length: function () {
+                return (this.first + this.last).length
+            },
+            upper: function () {
+                let cnt = 0
+                let s = this.first + this.last
+                for (let i = 0; i < s.length; i++) {
+                    if (s[i] >= 'A' && s[i] <= 'Z') {
+                        cnt++
+                    }
+                }
+                return cnt
+            },
+            lower: function () {
+                let cnt = 0
+                let s = this.first + this.last
+                for (let i = 0; i < s.length; i++) {
+                    if (s[i] >= 'a' && s[i] <= 'z') {
+                        cnt++
+                    }
+                }
+                return cnt
+            },
+        },
+        watch: {
+            first: function (val) {
+                this.first = val
+            },
+            last: function (val) {
+                this.last = val
+            },
+        }
+    })
+    new Vue({
+        el: "#app"
+    })
+</script>
+
+</html>

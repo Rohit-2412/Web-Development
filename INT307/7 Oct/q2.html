@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Events</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h1 class="text-center text-primary display-3 mb-3">{{title}}</h1>
+        <a class="text-success fs-4 text-center d-block" href="hreflink" target="_blank">Click Here</a>
+        <a class="text-primary fs-4 text-center d-block" href="{{hreflink}}" target="_blank">Click Here</a>
+        <a class="text-danger fs-4 text-center d-block" v-bind:href="hreflink" target="_blank">Click Here</a>
+
+    </div>
+</body>
+<script>
+    new Vue({
+        el: "#root",
+        data: {
+            title: "Data Binding Example",
+            hreflink: "https://www.google.com",
+        },
+    })
+</script>
+
+</html>

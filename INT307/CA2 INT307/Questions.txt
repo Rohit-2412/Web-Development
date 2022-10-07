@@ -1,0 +1,2 @@
+1. write a program in vue js use components and computed properties together.
+2. write a program to display the functionality of watch property and create a proper relationship between the instance and watchers

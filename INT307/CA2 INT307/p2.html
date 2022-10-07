@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Question 2 - Instances and Watchers</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</head>
+<style>
+    body {
+        background-image: url("https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        background-size: cover;
+    }
+</style>
+
+<body>
+    <div id="root">
+        <p class="display-6 text-center my-4 ">Watch Property in Vue.js</p>
+        <h3 class="text-center text-success">{{heading}}</h3>
+        <h4 class="text-center text-primary">{{rate}}</h4>
+        <center>
+            <div class="container">
+                <div class="m-4">
+                    <label for="inr">INR: </label>
+                    <input type="number" id="inr" v-model="inr">
+                </div>
+
+                <div class="m-4">
+                    <label for="usd">USD: </label>
+                    <input type="number" id="usd" v-model="usd">
+                </div>
+
+            </div>
+        </center>
+
+        <h3 class="text-center">{{heading2}}</h3>
+        <h4 class="text-center text-danger">{{rate2}}</h4>
+        <center>
+            <div class="container">
+                <div class="m-4">
+                    <label for="hour">Hour: </label>
+                    <input type="number" id="hour" v-model="hour">
+                </div>
+
+                <div class="m-4">
+                    <label for="min">Minutes: </label>
+                    <input type="number" id="min" v-model="min">
+                </div>
+
+            </div>
+        </center>
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#root',
+        data: {
+            heading: "INR to USD Conversion",
+            rate: "1 USD = 73.5 INR",
+            heading2: "Hour to Minutes Conversion",
+            rate2: "1 Hour = 60 Minutes",
+            inr: 0,
+            usd: 0,
+            min: 0,
+            hour: 0
+        }, watch: {
+            inr: function (val) {
+                this.inr = val
+                this.usd = val / 74.5;
+            },
+            usd: function (val) {
+                this.usd = val
+                this.inr = val * 74.5;
+            },
+            min: function (val) {
+                this.min = val
+                this.hour = Math.round((val / 60) * 100) / 100;
+            },
+            hour: function (val) {
+                this.hour = val
+                this.min = Math.round(val * 60)
+            }
+        }
+    })
+</script>
+
+</html>
