@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>Vue.js Event Handling</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="eg_2">
+        <h1 class="text-center">Number 1:{{number1}}</h1>
+        <h1 class="text-center">Number 2:{{number2}}</h1>
+        <button v-on:click.once="btnadd" v-bind:style="styleobj"
+            class="d-block mx-auto my-3 btn btn-lg rounded-pill">Add</button>
+        <button v-on:click.once="btnsub" v-bind:style="styleobj"
+            class="d-block mx-auto my-3 btn btn-lg rounded-pill">Subtract</button>
+        <button v-on:click.once="btnmul" v-bind:style="styleobj"
+            class="d-block mx-auto my-3 btn btn-lg rounded-pill">Multiply</button>
+        <button v-on:click.once="btndiv" v-bind:style="styleobj"
+            class="d-block mx-auto my-3 btn btn-lg rounded-pill">Divide</button>
+        <br /><br />
+        <h2 class="display-6 text-center">Output:{{answer}}</h2>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#eg_2',
+            data: {
+                number1: 15,
+                number2: 5,
+                answer: 0,
+                styleobj: {
+                    backgroundColor: 'tomato',
+                    cursor: 'pointer',
+                    padding: '8px 16px',
+                    verticalAlign: 'middle',
+                }
+            },
+            methods: {
+                btnadd: function () {
+                    this.answer = this.number1 + this.number2
+                },
+                btnsub: function () {
+                    this.answer = this.number1 - this.number2
+                },
+                btnmul: function () {
+                    this.answer = this.number1 * this.number2
+                },
+                btndiv: function () {
+                    this.answer = this.number1 / this.number2
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>

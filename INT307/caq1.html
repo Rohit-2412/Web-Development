@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ques1</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        body {
+            background-color: lightcoral;
+        }
+
+        h2 {
+            color: blue;
+        }
+
+        button {
+            color: rgb(7, 155, 7);
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div id="arithematic_operators">
+            <button v-on:click="sum">
+                <CLICK><B>CLICK ME</B>
+            </button>
+            <button v-on:click="subtract">
+                <CLICK><B>CLICK ME</B>
+            </button>
+
+            <h2>Add two Number 1000 + 1000 = {{total}}</h2>
+            <h2 style="color:brown;">subtract two numbers 1000 - 1000 = {{sub}}</h2>
+
+        </div>
+
+        <script>
+            var vm = new Vue({
+                el: '#arithematic_operators',
+                data: {
+                    num1: 1000,
+                    num2: 1000,
+                    total: '',
+                    sub: ''
+
+                },
+                computed: {
+
+                },
+                methods: {
+                    sum: function (event) {
+                        console.log(event);
+                        return this.total = this.num1 + this.num2;
+                    },
+                    subtract: function (event) {
+                        console.log(event);
+                        return this.sub = this.num1 - this.num2;
+                    }
+                },
+            });
+        </script>
+    </center>
+</body>
+
+</html>

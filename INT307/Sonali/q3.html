@@ -15,11 +15,6 @@
 </head>
 
 <body>
-    <div id="app1">
-        <center>
-            <mycomponent></mycomponent>
-        </center>
-    </div>
 
     <div id="app" class="container">
         <h1 class="text-center text-success">Watch Property</h1>
@@ -35,7 +30,7 @@
             </div>
         </form>
 
-        <h1 class="my-4">Square Root of integer</h1>
+        <h1 class="my-4">Square of integer</h1>
 
         <form>
             <div class="form-group">
@@ -43,7 +38,7 @@
                 <input type="text" class="form-control" id="input3" v-model="number">
             </div>
             <div class="form-group">
-                <label for="input4">Sqaure Root</label>
+                <label for="input4">Sqaure</label>
                 <input type="text" class="form-control" id="input4" v-model="root">
             </div>
         </form>
@@ -51,33 +46,6 @@
 </body>
 
 <script>
-    Vue.component('mycomponent', {
-        template: `
-        <div>
-        <h1 style="color: #ffbe0b;">Welcome to Components</h1>
-        <h3 v-on:mouseover="handleMouseover()" v-on:mouseout="getOriginal()">Welcome to <span id="name">{{name}}</span></h3>
-        <img src="https://images.pexels.com/photos/7105/coffee-iphone-laptop-notebook.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" height=250 height = 475 height=250 height=475 style="border:5px solid #f07167; border-radius:5%;" />
-        <br>
-        </div>
-        `,
-        data: function () {
-            return {
-                name: "CA2 of INT303"
-            }
-        },
-        methods: {
-            handleMouseover: function () {
-                this.name = "Vue.js"
-            },
-            getOriginal: function () {
-                this.name = "CA2 - INT303"
-            }
-        },
-    });
-
-    let instance1 = new Vue({
-        el: "#app1"
-    })
 
     new Vue({
         el: "#app",

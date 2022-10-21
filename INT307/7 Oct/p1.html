@@ -13,6 +13,13 @@
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
         crossorigin="anonymous"></script>
 </head>
+<style>
+    body {
+        background-image: url("https://images.unsplash.com/photo-1637021536350-f35080d4d194?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+        background-size: cover;
+        background-position: center;
+    }
+</style>
 
 <body>
     <div id="root">
@@ -40,7 +47,7 @@
             },
             decrement: function () {
                 this.value -= 3;
-                this.val = "Negative";
+                if (this.val < 0) this.val = "Negative";
             },
             multiply: function () {
                 this.value *= 2

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>if and else directives</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p class="text-center display-4 my-2">Enter Number</p>
+        <input type="number" v-model="number" class="my-2 mx-auto d-block">
+        <h1 class="text-center fs-1 text-danger my-4" v-if="data > 50">Data is greater than 50</h1>
+        <h1 class="text-center fs-1 text-primary my-4" v-else-if="data < 50">Data is less than 50</h1>
+        <h1 class="text-center fs-1 text-success my-4" v-else>Data is equal to 50</h1>
+        <button class="btn btn-lg btn-outline-primary mx-auto d-block" @click="check">Check</button>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            data: 0
+        },
+        methods: {
+            check: function () {
+                this.data = this.number
+            }
+        }
+    })
+</script>
+
+</html>
