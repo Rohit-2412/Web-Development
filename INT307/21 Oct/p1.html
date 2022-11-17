@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- create a basic web form with css and js -->
+    <title>Form</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- textarea -->
+    <!-- text box -->
+    <!-- check box -->
+    <div id="app" class="px-3">
+        <h1 class="display-3 text-center fw-bold">Form in Vue.js</h1>
+        <center>
+            <h1 class="text-danger fs-1">Text Box</h1>
+            <input class="border border-1 border-danger rounded" v-model="textbox" placeholder="Enter some text">
+            <p> Entered text: {{textbox}}</p>
+            <p> Length: {{lengthTB}}</p>
+
+            <h1 class="text-primary fs-1">Enter a paragraph</h1>
+            <input class="border border-1 border-primary rounded" v-model="para" placeholder="Enter something...">
+            <p> Entered paragraph: {{para}}</p>
+            <p> Length: {{lengthPara}}</p>
+
+            <h1 class="text-warning fs-1">Check Box</h1>
+            <input type="checkbox" v-model="check"> Completed
+            <p>Value: {{check}}</p>
+        </center>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            textbox: '',
+            para: '',
+            check: false,
+        },
+        computed: {
+            lengthTB: function () {
+                return this.textbox.length;
+            },
+            lengthPara: function () {
+                return this.para.length;
+            }
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Vue.js Animation</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js">
+
+    </script>
+</head>
+
+<body id="body_tag">
+    <div id="trans_2" style="text-align:center">
+        <transition appear appear-class="custom-appear-class" appear-active-class="animated bounceIn">
+            <div class="container mt-3">
+                <!-- display random image -->
+                <img class="mx-4" src="https://picsum.photos/150/150"> <br>
+                <!-- caption -->
+                <span class="text-danger">Random Image</span>
+            </div>
+        </transition>
+        <transition appear appear-class="custom-appear-class" appear-active-class="animated swing">
+            <div class="container mt-3">
+                <!-- display random image -->
+                <img class="mx-4" src="https://picsum.photos/150/150"> <br>
+                <!-- caption -->
+                <span class="text-danger">Random Image</span>
+            </div>
+        </transition>
+        <transition appear appear-class="custom-appear-class" appear-active-class="animated rubberBand">
+            <div class="container mt-3">
+                <!-- display random image -->
+                <img class="mx-4" src="https://picsum.photos/150/150"> <br>
+                <!-- caption -->
+                <span class="text-danger">Random Image</span>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: '#trans_2',
+            data: {
+                show: true
+            }
+        })  
+    </script>
+</body>
+
+</html>

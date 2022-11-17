@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "vue": "^3.2.36"
+  },
+  "devDependencies": {
+    "electron": "^21.2.3"
   }
 }

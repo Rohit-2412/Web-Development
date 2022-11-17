@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Vue js Lists</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h1>Enter a number</h1>
+        <input type="text" v-model="num" placeholder="type here" width="85">
+        <!-- display an ordered list from 1 till num using v-for -->
+        <h2>Unordered List</h2>
+        <ul>
+            <li v-for="n in arr">{{n}}</li>
+        </ul>
+
+    </div>
+</body>
+<script>
+    new Vue({
+        el: "#root",
+        data: {
+            num: "",
+        },
+        watch: {
+            num(val) {
+                this.num = val;
+            }
+        }, computed: {
+            arr() {
+                // if string is empty return null 
+                if (this.num == "") {
+                    return null;
+                }
+                // split the input number by a space and then add it to array
+                let a = this.num.split(" ");
+                // remove empty spaces from array
+                a = a.filter((item) => item != "");
+                return a;
+            }
+        }
+
+    })
+</script>
+
+</html>

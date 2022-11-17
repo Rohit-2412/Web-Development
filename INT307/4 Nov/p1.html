@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Vue JS Transitions</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</head>
+<style>
+    /* fade transition */
+    .fade-enter-active,
+    .fade-leave-active {
+        transition: opacity 2s;
+    }
+
+    .fade-enter,
+    .fade-leave-to {
+        opacity: 0;
+    }
+
+    /* bounce transition */
+    .bounce-enter-active {
+        animation: bounce-in .5s;
+    }
+
+    .bounce-leave-active {
+        animation: bounce-in .5s reverse;
+    }
+
+    @keyframes bounce-in {
+        0% {
+            transform: scale(0);
+        }
+
+        50% {
+            transform: scale(1.5);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .rotating-enter-active,
+    .rotating-leave-active {
+        animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    @keyframes pulse {
+
+        /* rotate the text and move its axis */
+        0% {
+            transform: scale(0.8);
+            rotate: 0deg;
+        }
+
+        50% {
+            transform: scale(1.3);
+            rotate: 180deg;
+        }
+
+        100% {
+            transform: scale(0.8);
+            rotate: 360deg;
+        }
+    }
+</style>
+
+<body>
+    <div id="app">
+
+
+        <button @click="show = !show" class="btn btn-primary mx-auto d-block my-3">Click to Toggle the state</button>
+
+        <!-- fade transition -->
+        <!-- <transition name='fade'>
+            <p class="text-center text-danger display-4" v-show="show" v-bind:style="styleobj">Lovely Professional
+                University</p>
+        </transition> -->
+
+        <!-- bounce transition -->
+        <!-- <transition name='bounce'>
+            <p class="text-center text-danger display-4" v-show="show" v-bind:style="styleobj">Lovely Professional
+                University</p>
+            </transition> -->
+
+        <!-- custom transition -->
+        <transition name='rotating' v-on:before-enter="beforeEnter" v-on:enter="enter" v-on:leave="leave">
+            <p class="text-center text-danger display-4" v-show="show" v-bind:style="styleobj">Lovely
+                Professional
+                University</p>
+        </transition>
+
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            show: "true",
+            styleobj: {
+                color: "red",
+                fontSize: "50px",
+                fontWeight: "bold"
+            }
+        }
+    })
+</script>
+
+</html>

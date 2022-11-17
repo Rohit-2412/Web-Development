@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script src="https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{status}}
+        <div class="journey">
+            <input type="file" id="imageLoader" @change="updateCanvasImage" />
+            <canvas id="imageCanvas" ref="imageCanvas"></canvas>
+        </div>
+        <p class="mt-4">Text: {{conversion}}</p>
+        <button class="btn btn-primary" @click="translate">Convert</button>
+
+        <button class="btn btn-primary" @click="speak">Speak</button>
+        <p class="mt-4">Converted: {{translation}}</p>
+    </div>
+</body>
+<script>
+    new Vue({
+        data() {
+            return {
+                dataUrl: '',
+                status: '',
+                conversion: '',
+                translation: ''
+            }
+        },
+        methods: {
+            updateCanvasImage(e) {
+                this.status = 'initialize'
+                var self = this;
+
+                var reader, files = e.target.files;
+
+                var reader = new FileReader();
+
+                reader.onload = (e) => {
+                    var img = new Image();
+                    img.onload = function () {
+                        self.drawCanvasImage(img)
+                    }
+                    img.src = event.target.result;
+                };
+
+                reader.readAsDataURL(files[0]);
+
+            },
+
+            drawCanvasImage(img) {
+                var vm = this
+                var canvas = this.$refs.imageCanvas;
+                canvas.width = img.width;
+                canvas.height = img.height;
+
+                var ctx = canvas.getContext('2d');
+                ctx.drawImage(img, 0, 0);
+                this.dataUrl = canvas.toDataURL();
+                this.status = 'reading'
+                Tesseract.recognize(this.dataUrl, 'hin', {
+                    logger: log => {
+
+                        console.log(log);
+
+                    }
+                })
+                    .then(result => {
+
+                        // alert(result.data.text);
+                        this.conversion = result.data.text
+                        vm.status = ''
+                    })
+                    .catch(error => console.log(error))
+                    .finally(() => {
+
+
+                    });
+            },
+
+            translate() {
+                const url = 'https://microsoft-translator-text.p.rapidapi.com/translate?to%5B0%5D=en&api-version=3.0&from=hi&profanityAction=NoAction&textType=plain';
+
+                const options = {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json',
+                        'X-RapidAPI-Key': 'b71f3df8dcmsh8ec188412370131p121c43jsn95bfb83a5bfb',
+                        'X-RapidAPI-Host': 'microsoft-translator-text.p.rapidapi.com'
+                    },
+
+                    // set body content to entered text
+                    body: JSON.stringify([{
+                        "Text": this.conversion
+                    }])
+                };
+
+                fetch(url, options)
+                    .then(res => res.json())
+                    .then(
+                        // set result to translated text
+                        json => {
+                            this.translation = json[0].translations[0].text;
+                        },
+                    )
+                    .catch(err => console.error('error:' + err));
+
+            },
+
+            speak() {
+                const utterance = new SpeechSynthesisUtterance(this.translation);
+                speechSynthesis.speak(utterance);
+            }
+        }
+    }).$mount('#app');
+</script>
+
+</html>

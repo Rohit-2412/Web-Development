@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- weather app -->
+    <div id="root">
+        <h2>City : {{city}}</h2>
+        <h2>Region : {{region}}</h2>
+        <h2>Country : {{country}}</h2>
+        <h2>Temperature : {{temp}}</h2>
+        <h2>Text : {{text}}</h2>
+        <h2>Wind : {{wind}}</h2>
+        <h2>Humidity : {{humidity}}</h2>
+        <h2>Visibility : {{visibility}}</h2>
+        <h2>Pressure : {{pressure}}</h2>
+        <h2>Rising : {{rising}}</h2>
+        <h2>Sunrise : {{sunrise}}</h2>
+        <h2>Sunset : {{sunset}}</h2>
+        <input type="text" v-model="entry">
+        <button @click="weather">Check</button>
+    </div>
+</body>
+<script>
+
+    new Vue({
+        el: '#root',
+        data: {
+            city: '',
+            region: '',
+            country: '',
+            temp: '',
+            text: '',
+            wind: '',
+            humidity: '',
+            visibility: '',
+            pressure: '',
+            rising: '',
+            sunrise: '',
+            sunset: '',
+            entry: '',
+        },
+        watch: {
+            entry: function (val) {
+                this.entry = val
+            }
+        },
+        methods: {
+            weather() {
+                const options = {
+                    method: 'GET',
+                    headers: {
+                        'X-RapidAPI-Key': 'b71f3df8dcmsh8ec188412370131p121c43jsn95bfb83a5bfb',
+                        'X-RapidAPI-Host': 'yahoo-weather5.p.rapidapi.com'
+                    }
+                };
+                let url = 'https://yahoo-weather5.p.rapidapi.com/weather?location=' + this.entry + '&format=json&u=f';
+                fetch(url, options)
+                    .then(response => response.json())
+                    .then(response => {
+                        this.city = response.location.city;
+                        this.region = response.location.region;
+                        this.country = response.location.country;
+                        this.temp = response.current_observation.condition.temperature;
+                        this.text = response.current_observation.condition.text;
+                        this.wind = response.current_observation.wind.speed;
+                        this.humidity = response.current_observation.atmosphere.humidity;
+                        this.visibility = response.current_observation.atmosphere.visibility;
+                        this.pressure = response.current_observation.atmosphere.pressure;
+                        this.rising = response.current_observation.atmosphere.rising;
+                        this.sunrise = response.current_observation.astronomy.sunrise;
+                        this.sunset = response.current_observation.astronomy.sunset;
+                    })
+
+                    .catch(err => console.error(err));
+            }
+        }
+    })
+</script>
+
+</html>

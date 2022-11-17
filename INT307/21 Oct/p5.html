@@ -1,0 +1,108 @@
+<!-- Name
+age
+gender
+symptoms
+issues -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Patient Entry Form</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</head>
+<style>
+    label {
+        font-size: 35px;
+        color: royalblue;
+        font-weight: 700;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    input {
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif
+    }
+
+    h2 {
+        margin-top: 15px;
+        color: navy;
+    }
+
+    p {
+        font-size: larger;
+        color: orangered;
+        font-weight: 700;
+    }
+
+    h1 {
+        font-size: 40px;
+        color: palevioletred;
+        text-align: center;
+        font-weight: 600;
+    }
+</style>
+
+<body style="background-color: #1536;">
+    <h1>Patient Entry Form</h1>
+    <div id="app" class="p-4">
+        <!-- name -->
+        <label>Name</label>
+        <input type="text" v-model.lazy="name" placeholder="Enter your name">
+
+        <br>
+        <br>
+        <!-- age -->
+        <label for="">Age</label>
+        <input type="number" v-model.number="age" placeholder="Enter your age">
+        <br><br>
+        <!-- gender -->
+        <label>Gender</label>
+        <input type="radio" value="male" v-model='gen'> Male
+        <input type="radio" value="female" v-model='gen'> Female
+        <br>
+        <br>
+        <br>
+        <!-- symptoms -->
+        <label for="">Symptoms</label> <br>
+        <input type="checkbox" v-model="fvr"> Fever <br>
+        <input type="checkbox" v-model="cld"> Cold <br>
+        <input type="checkbox" v-model="cgh"> Cough <br>
+        <input type="checkbox" v-model="headach"> Headache
+
+        <h2>You Entered:</h2>
+        <p>Name: {{name}}</p>
+        <p>Age: {{age}}</p>
+        <p v-if="gen==male">Gender: Male </p>
+        <p v-else>Gender: Female </p>
+        <p>Symptoms</p>
+        <ul>
+            <li v-if="fvr">Fever</li>
+            <li v-if="cld">Cold</li>
+            <li v-if="cgh">Cough</li>
+            <li v-if="headach">Headache</li>
+        </ul>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            name: '',
+            age: 0,
+            gender: '',
+            symptoms: '',
+            issues: ''
+        }
+    })
+</script>
+
+</html>

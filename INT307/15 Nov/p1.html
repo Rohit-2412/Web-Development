@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>render function</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<!--  -->
+
+<body>
+    <div id="component_test">
+        <testcomponent :elementtype="'div,red,25,div1'">12.25</testcomponent>
+        <testcomponent :elementtype="'h3,green,25,h3tag'">1</testcomponent>
+        <testcomponent :elementtype="'p,blue,25,ptag'">0</testcomponent>
+        <testcomponent :elementtype="'div,green,25,divtag'">524</testcomponent>
+    </div>
+    <script>
+        Vue.component('testcomponent', {
+            render: function (createElement) {
+                var a = this.elementtype.split(",");
+                return createElement(a[0], {
+                    attrs: {
+                        id: a[3],
+                        style: "color:" + a[1] + ";font-size:" + a[2] + ";"
+                    }
+                },
+                    this.$slots.default
+                )
+            },
+            props: {
+                elementtype: {
+                    attributes: String,
+                    required: true
+                }
+            }
+        });
+        var vm = new Vue({
+            el: '#component_test'
+        });
+    </script>
+</body>
+
+</html>
