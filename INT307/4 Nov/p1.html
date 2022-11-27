@@ -86,16 +86,16 @@
         </transition> -->
 
         <!-- bounce transition -->
-        <!-- <transition name='bounce'>
+        <transition name='bounce'>
             <p class="text-center text-danger display-4" v-show="show" v-bind:style="styleobj">Lovely Professional
                 University</p>
-            </transition> -->
+        </transition>
 
         <!-- custom transition -->
-        <transition name='rotating' v-on:before-enter="beforeEnter" v-on:enter="enter" v-on:leave="leave">
+        <!-- <transition name='rotating' v-on:before-enter="beforeEnter" v-on:enter="enter" v-on:leave="leave">
             <p class="text-center text-danger display-4" v-show="show" v-bind:style="styleobj">Lovely
                 Professional
-                University</p>
+                University</p> -->
         </transition>
 
     </div>
@@ -104,12 +104,7 @@
     new Vue({
         el: '#app',
         data: {
-            show: "true",
-            styleobj: {
-                color: "red",
-                fontSize: "50px",
-                fontWeight: "bold"
-            }
+            show: true
         }
     })
 </script>
