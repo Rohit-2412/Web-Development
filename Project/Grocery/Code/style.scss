@@ -108,7 +108,7 @@ section {
 }
 
 .heading {
-    background: url(../images/heading.jpg) no-repeat;
+    background: url(../images/heading-bg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -605,189 +605,9 @@ section {
     }
 }
 
-// new home 
-
-// .home {
-//   padding-top: 7.5rem;
-//   display: flex;
-
-//   .content {
-//     .btn {
-//       margin-top: 2rem;
-//       border-radius: 75px;
-
-//       &:hover {
-//         color: $white;
-//         font-weight: 500;
-//       }
-//     }
-
-//     .btn1 {
-//       border-radius: 40px;
-//       background: lighten($color: #ff6347, $amount: 5);
-//       color: $black;
-//       font-size: 1.15rem;
-//       padding: 1.15rem !important;
-//     }
-
-//     p {
-//       font-size: 1.5rem;
-//       margin: 1rem 0 1.5rem 0;
-//     }
-
-//     .btn2 {
-//       padding: 1.15rem !important;
-//       color: $white;
-//       border-radius: 50px;
-//       background: lighten($color: $blue, $amount: 35);
-
-//       &:hover {
-//         color: $blue;
-//         background: $white;
-//       }
-//     }
-
-//     .btn3 {
-//       margin-left: 15px;
-//       border-radius: 50px;
-//       background: #e0e0e0;
-//       box-shadow: inset 20px 20px 60px whitesmoke,
-//         inset -20px -20px 60px #ffffff;
-
-//     }
-
-//     .box {
-//       display: flex;
-//       margin: 3.5rem 0;
-
-//       .image {
-//         img {
-//           height: 10rem;
-//           object-fit: contain;
-//         }
-//       }
-
-//       .content {
-//         padding: .25rem 1rem;
-//         margin: 0 3rem;
-
-//         h2 {
-//           font-size: 2rem;
-//           margin: 0.5rem 0;
-//         }
-
-//         .weight {
-//           font-size: 1.5rem;
-//           color: $tomato;
-//           padding: 0.5rem 0rem;
-
-//           margin-right: 1rem;
-//         }
-
-//         .star {
-//           padding: 0.5rem 0rem;
-//           font-size: 1.5rem;
-
-//           i {
-//             color: $sand;
-//           }
-//         }
-
-//         .price {
-//           font-weight: bold;
-
-//           i {
-//             background: $blue;
-//             color: $white;
-//             border-radius: 100px;
-//             padding: .75rem;
-//             margin: 0 1rem;
-//             cursor: pointer;
-//           }
-//         }
-//       }
-//     }
-
-//     h1 {
-//       margin: 2rem 0;
-//       font-size: 4rem;
-//     }
-
-
-//   }
-
-//   position: relative;
-
-//   .image {
-
-//     .btn {
-//       position: absolute;
-
-//       &:hover {
-//         font-weight: 500;
-//       }
-//     }
-//   }
-
-//   .btn1 {
-//     right: 2%;
-//     top: 19%;
-//     display: flex;
-//     gap: 1rem;
-//     padding: 1.75rem !important;
-//     border-radius: 30px;
-//     background: linear-gradient(-145deg, #f3f4f1, #f4f4f4);
-//     box-shadow: 20px -20px 60px #c2c2c2,
-//       -20px 20px 60px #ffffff;
-
-//     .alarm {
-//       i {
-//         font-size: 3.5rem;
-//         color: $blue;
-//       }
-//     }
-
-//     .text {
-//       text-align: center;
-//       font-size: 1.75rem;
-//       color: $black;
-//     }
-//   }
-
-//   .btn2 {
-//     top: 49%;
-//     right: 38%;
-//     border-radius: 50px;
-//     background: whitesmoke;
-//     opacity: .8;
-//     padding: 1.25rem 1.5rem;
-//     box-shadow: -5px 5px 15px #bdc1bc,
-//       5px -5px 15px #ffffff;
-//     color: $black;
-
-//     i {
-//       font-size: 2rem;
-//       color: $tomato;
-//     }
-
-//   }
-
-//   .btn3 {
-//     right: 7%;
-//     bottom: 15px;
-//     border-radius: 50px;
-//     background: #e4e4e4;
-//     box-shadow: -30px -30px 60px #bdbdbd,
-//       30px 30px 60px #ffffff;
-//     color: $black;
-//   }
-// }
-
-// for slideshow
-
 .home {
     padding-top: 14rem;
-    background: url(/Grocery/images/home-bg.jpg) no-repeat;
+    background: url(../images/home-bg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -1584,10 +1404,6 @@ section {
             }
         }
     }
-
-    // .contact .icons-container {
-    //     @include grid(30%);
-    // }
 
 }
 
