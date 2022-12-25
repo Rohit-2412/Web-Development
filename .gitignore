@@ -1,9 +1,7 @@
 .vscode
-*.jpg
-*.jpeg
-*.png
-*.webp
-*.svg
+INT307/Sonali
 node_modules
 /node_modules
 /node_modules/
+**/img
+Project/YT-clone
